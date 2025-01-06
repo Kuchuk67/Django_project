@@ -22,5 +22,5 @@ from django.urls import path, include
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('catalog/', include('catalog.urls', namespace='catalog')),
-    path('', include('catalog.urls')), # пока одно приложение редирект на catalog/
+    path('', include('catalog.urls', namespace='index_catalog')), # пока одно приложение редирект на catalog/
 ]
