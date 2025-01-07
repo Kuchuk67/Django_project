@@ -5,7 +5,7 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'home.html')
 
-def contact(request):
+def contacts(request):
     if request.method == 'POST':
         # Получение данных из формы
         name = request.POST.get('name')
@@ -15,5 +15,5 @@ def contact(request):
         request.status_post = True
     else:
         request.status_post = False
-    return render(request, 'contact.html')
+    return render(request, 'contacts.html')
 
