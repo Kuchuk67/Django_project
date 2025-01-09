@@ -9,7 +9,7 @@
 
 ### templates
 #### head.html
-Шапка <head>...</head> сайта с методанными
+Шапка \<head>...\</head> сайта с методанными
 #### menu.html
 меню сайта
 #### home.html
