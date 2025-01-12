@@ -4,7 +4,7 @@ from django.db import models
 from django.db import models
 
 class Category(models.Model):
-    category = models.CharField(max_length=150, verbose_name='категория')
+    category_name = models.CharField(max_length=150, verbose_name='категория')
     description = models.TextField(verbose_name='описание')
 
 
@@ -14,13 +14,13 @@ class Category(models.Model):
     class Meta:
         verbose_name = 'Категория'
         verbose_name_plural = 'Категории'
-        ordering = ['category']
+        ordering = ['category_name']
 
 class Product(models.Model):
     name = models.CharField(max_length=150, verbose_name='наименование')
     description = models.TextField(verbose_name='описание')
     image = models.ImageField(upload_to='images/', verbose_name='изображение')
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="category")
     price = models.IntegerField( verbose_name='цена')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='дата создания')
     updated_at = models.DateTimeField(auto_now_add=True, verbose_name='дата последнего изменения')
@@ -32,5 +32,5 @@ class Product(models.Model):
     class Meta:
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
-        ordering = ['data_create']
+        ordering = ['created_at']
 
