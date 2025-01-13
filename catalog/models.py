@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-from django.db import models
+
 
 class Category(models.Model):
     category_name = models.CharField(max_length=150, verbose_name='категория')
@@ -9,7 +9,7 @@ class Category(models.Model):
 
 
     def __str__(self):
-        return f'{self.category}'
+        return f'{self.category_name}'
 
     class Meta:
         verbose_name = 'Категория'

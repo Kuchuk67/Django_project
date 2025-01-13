@@ -1,7 +1,12 @@
 SQL_HOST = "localhost"
 SQL_DATABASE = "catalog_shop"
 SQL_USER = "user_catalog"
-SQL_PASS = "987654321"
+SQL_PASS = "**********"
 SQL_PORT = 5432
 
 SCRT_KEY = "django-insecure--l1dp0^fiir4e63=)y$o2pzv%gl3w=$vtmfiiwy7ad^4+(^%8m"
+
+
+# CREATE database catalog_shop;
+# CREATE USER user_catalog WITH PASSWORD '987654321';
+# ALTER DATABASE catalog_shop OWNER TO user_catalog;
