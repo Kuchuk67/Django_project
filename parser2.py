@@ -36,7 +36,7 @@ for offer in offers:
     rez = re.search('[0-9]+', offer)
     id_ = rez[0]
 
-    rez = re.search("(Id>)([0-9]+)\<", offer)
+    rez = re.search("(Id>)([0-9]+)<", offer)
     category_id = (rez[0])[3:-1]
 
     rez = re.search("(TA\[)([^}]+)]]", offer)
@@ -59,8 +59,8 @@ for offer in offers:
         <field name="image" type="FileField">{img}</field>
         <field name="category" rel="ManyToOneRel" to="catalog.category">{category_id}</field>
         <field name="price" type="IntegerField">{price}</field>
-        <field name="created_at" type="DateTimeField">{dt}</field>
-        <field name="updated_at" type="DateTimeField">{dt}</field>
+        <field name="created_at" type="DateTimeField">{dt}+03:00</field>
+        <field name="updated_at" type="DateTimeField">{dt}+03:00</field>
     </object>
 '''
 
