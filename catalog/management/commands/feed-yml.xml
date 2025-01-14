@@ -12,12 +12,8 @@
 <categories>
 <category id="328" parentId="186">Наушники и гарнитуры Apple Airpods</category>
 <category id="327" parentId="6">Смартфоны Huawei</category>
-<category id="322" parentId="6">Смартфоны Infinix</category>
-<category id="325" parentId="6">Смартфоны OPPO</category>
-<category id="283" parentId="6">Смартфоны Realme</category>
 <category id="330" parentId="186">Наушники и гарнитуры Samsung</category>
 <category id="232" parentId="152">Умные часы Samsung</category>
-<category id="311" parentId="6">Смартфоны Sony</category>
 <category id="329" parentId="186">Наушники и гарнитуры Sony</category>
 <category id="246" parentId="30">Аксессуары Xiaomi</category>
 <category id="215">Игровые приставки</category>
@@ -26,10 +22,8 @@
 <category id="30">Аксессуары</category>
 <category id="152">Умные часы</category>
 <category id="153" parentId="152">Умные часы Apple</category>
-<category id="7">Планшеты</category>
 <category id="179" parentId="7">Планшеты Apple</category>
 <category id="181" parentId="7">Планшеты Xiaomi</category>
-<category id="6">Смартфоны</category>
 <category id="120" parentId="6">Смартфоны Samsung</category>
 <category id="11" parentId="6">Смартфоны Apple</category>
 <category id="64" parentId="6">Смартфоны Xiaomi</category>

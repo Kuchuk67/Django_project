@@ -1,72 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<django-objects version="1.0">
-    <object model="catalog.category" pk="328">
-        <field name="category_name" type="CharField">Наушники и гарнитуры Apple Airpods</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="327">
-        <field name="category_name" type="CharField">Смартфоны Huawei</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="322">
-        <field name="category_name" type="CharField">Смартфоны Infinix</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="325">
-        <field name="category_name" type="CharField">Смартфоны OPPO</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="283">
-        <field name="category_name" type="CharField">Смартфоны Realme</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="330">
-        <field name="category_name" type="CharField">Наушники и гарнитуры Samsung</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="232">
-        <field name="category_name" type="CharField">Умные часы Samsung</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="311">
-        <field name="category_name" type="CharField">Смартфоны Sony</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="329">
-        <field name="category_name" type="CharField">Наушники и гарнитуры Sony</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="246">
-        <field name="category_name" type="CharField">Аксессуары Xiaomi</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="215">
-        <field name="category_name" type="CharField">Игровые приставки</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="68">
-        <field name="category_name" type="CharField">Ноутбуки</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="159">
-        <field name="category_name" type="CharField">Фитнес-браслеты</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="30">
-        <field name="category_name" type="CharField">Аксессуары</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="152">
-        <field name="category_name" type="CharField">Умные часы</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="153">
-        <field name="category_name" type="CharField">Умные часы Apple</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="7">
-        <field name="category_name" type="CharField">Планшеты</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="179">
-        <field name="category_name" type="CharField">Планшеты Apple</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="181">
-        <field name="category_name" type="CharField">Планшеты Xiaomi</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="6">
-        <field name="category_name" type="CharField">Смартфоны</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="120">
-        <field name="category_name" type="CharField">Смартфоны Samsung</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="11">
-        <field name="category_name" type="CharField">Смартфоны Apple</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="64">
-        <field name="category_name" type="CharField">Смартфоны Xiaomi</field>
-        <field name="description" type="TextField"> </field>
-    </object></django-objects>
+    <django-objects version="1.0">
+        <object model="catalog.category" pk="328">
+            <field name="category_name" type="CharField">Наушники и гарнитуры Apple Airpods</field>
+            <field name="description" type="TextField"> </field>
+        </object>    <object model="catalog.category" pk="327">
+            <field name="category_name" type="CharField">Смартфоны Huawei</field>
+            <field name="description" type="TextField"> </field>
+        </object>    <object model="catalog.category" pk="330">
+            <field name="category_name" type="CharField">Наушники и гарнитуры Samsung</field>
+            <field name="description" type="TextField"> </field>
+        </object>    <object model="catalog.category" pk="232">
+            <field name="category_name" type="CharField">Умные часы Samsung</field>
+            <field name="description" type="TextField"> </field>
+        </object>    <object model="catalog.category" pk="329">
+            <field name="category_name" type="CharField">Наушники и гарнитуры Sony</field>
+            <field name="description" type="TextField"> </field>
+        </object>    <object model="catalog.category" pk="246">
+            <field name="category_name" type="CharField">Аксессуары Xiaomi</field>
+            <field name="description" type="TextField"> </field>
+        </object>    <object model="catalog.category" pk="215">
+            <field name="category_name" type="CharField">Игровые приставки</field>
+            <field name="description" type="TextField"> </field>
+        </object>    <object model="catalog.category" pk="68">
+            <field name="category_name" type="CharField">Ноутбуки</field>
+            <field name="description" type="TextField"> </field>
+        </object>    <object model="catalog.category" pk="159">
+            <field name="category_name" type="CharField">Фитнес-браслеты</field>
+            <field name="description" type="TextField"> </field>
+        </object>    <object model="catalog.category" pk="30">
+            <field name="category_name" type="CharField">Аксессуары</field>
+            <field name="description" type="TextField"> </field>
+        </object>    <object model="catalog.category" pk="152">
+            <field name="category_name" type="CharField">Умные часы</field>
+            <field name="description" type="TextField"> </field>
+        </object>    <object model="catalog.category" pk="153">
+            <field name="category_name" type="CharField">Умные часы Apple</field>
+            <field name="description" type="TextField"> </field>
+        </object>    <object model="catalog.category" pk="179">
+            <field name="category_name" type="CharField">Планшеты Apple</field>
+            <field name="description" type="TextField"> </field>
+        </object>    <object model="catalog.category" pk="181">
+            <field name="category_name" type="CharField">Планшеты Xiaomi</field>
+            <field name="description" type="TextField"> </field>
+        </object>    <object model="catalog.category" pk="120">
+            <field name="category_name" type="CharField">Смартфоны Samsung</field>
+            <field name="description" type="TextField"> </field>
+        </object>    <object model="catalog.category" pk="11">
+            <field name="category_name" type="CharField">Смартфоны Apple</field>
+            <field name="description" type="TextField"> </field>
+        </object>    <object model="catalog.category" pk="64">
+            <field name="category_name" type="CharField">Смартфоны Xiaomi</field>
+            <field name="description" type="TextField"> </field>
+        </object></django-objects>
