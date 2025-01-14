@@ -53,11 +53,8 @@
             <div class="col-12 col-sm-7 py-2">
                 <div class="card text-bg-primary">
                     <div class="card-body">
-                        <h2>Наши контакты</h2>
-                        <p><b>Адрес:</b> ул. имени К.Н. Иванова, д.1, село Понизовье</p>
-                        <p><b>Телефон:</b> +7 (48141) 11-22-33</p>
-                        <p><b>Время работы:</b> с 9:00 до 18:00</p>
-
+                        <h2>{{ contacts_title }}</h2>
+                        {{ contacts_txt | safe}}
                     </div>
                 </div>
             </div>

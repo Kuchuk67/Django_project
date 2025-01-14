@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import  PageBlock
 
 # Create your views here.
 
@@ -15,5 +16,8 @@ def contacts(request):
         request.status_post = True
     else:
         request.status_post = False
-    return render(request, 'contacts.html')
+    b_tests = PageBlock.objects.filter(id=1)
+    for x in b_tests:
+        data = {"contacts_title": x.title, "contacts_txt": x.text}
+    return render(request, 'contacts.html', context=data)
 
