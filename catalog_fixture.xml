@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <django-objects version="1.0">
-    <object model="catalog.category" pk="270">
-        <field name="category_name" type="CharField">Uncategorized</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="328">
+    <object model="catalog.category" pk="328">
         <field name="category_name" type="CharField">Наушники и гарнитуры Apple Airpods</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="235">
-        <field name="category_name" type="CharField">Ноутбуки Apple Macbook</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="345">
-        <field name="category_name" type="CharField">Dyson</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="237">
-        <field name="category_name" type="CharField">Смартфоны Google</field>
         <field name="description" type="TextField"> </field>
     </object>    <object model="catalog.category" pk="327">
         <field name="category_name" type="CharField">Смартфоны Huawei</field>
@@ -31,85 +19,22 @@
         <field name="category_name" type="CharField">Наушники и гарнитуры Samsung</field>
         <field name="description" type="TextField"> </field>
     </object>    <object model="catalog.category" pk="232">
-        <field name="category_name" type="CharField">Samsung</field>
+        <field name="category_name" type="CharField">Умные часы Samsung</field>
         <field name="description" type="TextField"> </field>
     </object>    <object model="catalog.category" pk="311">
         <field name="category_name" type="CharField">Смартфоны Sony</field>
         <field name="description" type="TextField"> </field>
     </object>    <object model="catalog.category" pk="329">
-        <field name="category_name" type="CharField">Sony</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="320">
-        <field name="category_name" type="CharField">Смартфоны Tecno</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="319">
-        <field name="category_name" type="CharField">Смартфоны Vivo</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="181">
-        <field name="category_name" type="CharField">Xiaomi</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="222">
-        <field name="category_name" type="CharField">Ноутбуки Xiaomi</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="210">
-        <field name="category_name" type="CharField">Автомобильные зарядные устройства</field>
+        <field name="category_name" type="CharField">Наушники и гарнитуры Sony</field>
         <field name="description" type="TextField"> </field>
     </object>    <object model="catalog.category" pk="246">
         <field name="category_name" type="CharField">Аксессуары Xiaomi</field>
         <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="294">
-        <field name="category_name" type="CharField">Видеорегистраторы Xiaomi</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="295">
-        <field name="category_name" type="CharField">Зарядные устройства и пауэрбанки Xiaomi</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="198">
-        <field name="category_name" type="CharField">Защитные пленки и стекла</field>
-        <field name="description" type="TextField"> </field>
     </object>    <object model="catalog.category" pk="215">
         <field name="category_name" type="CharField">Игровые приставки</field>
         <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="297">
-        <field name="category_name" type="CharField">Инструменты</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="200">
-        <field name="category_name" type="CharField">Карты памяти и USB-накопители</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="234">
-        <field name="category_name" type="CharField">Клавиатуры и мыши</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="296">
-        <field name="category_name" type="CharField">Мультимедиа и умный дом Xiaomi</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="208">
-        <field name="category_name" type="CharField">Настольные лампы</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="186">
-        <field name="category_name" type="CharField">Наушники и гарнитуры</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="293">
-        <field name="category_name" type="CharField">Пылесосы Xiaomi</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="231">
-        <field name="category_name" type="CharField">Рюкзаки</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="202">
-        <field name="category_name" type="CharField">Универсальные внешние аккумуляторы</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="201">
-        <field name="category_name" type="CharField">Чехлы и накладки</field>
-        <field name="description" type="TextField"> </field>
     </object>    <object model="catalog.category" pk="68">
         <field name="category_name" type="CharField">Ноутбуки</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="9">
-        <field name="category_name" type="CharField">Мультимедиа</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="161">
-        <field name="category_name" type="CharField">Акустические системы</field>
-        <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="160">
-        <field name="category_name" type="CharField">Медиаплееры</field>
         <field name="description" type="TextField"> </field>
     </object>    <object model="catalog.category" pk="159">
         <field name="category_name" type="CharField">Фитнес-браслеты</field>
@@ -117,17 +42,23 @@
     </object>    <object model="catalog.category" pk="30">
         <field name="category_name" type="CharField">Аксессуары</field>
         <field name="description" type="TextField"> </field>
+    </object>    <object model="catalog.category" pk="152">
+        <field name="category_name" type="CharField">Умные часы</field>
+        <field name="description" type="TextField"> </field>
     </object>    <object model="catalog.category" pk="153">
         <field name="category_name" type="CharField">Умные часы Apple</field>
+        <field name="description" type="TextField"> </field>
+    </object>    <object model="catalog.category" pk="7">
+        <field name="category_name" type="CharField">Планшеты</field>
         <field name="description" type="TextField"> </field>
     </object>    <object model="catalog.category" pk="179">
         <field name="category_name" type="CharField">Планшеты Apple</field>
         <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="122">
-        <field name="category_name" type="CharField">Планшеты Samsung</field>
+    </object>    <object model="catalog.category" pk="181">
+        <field name="category_name" type="CharField">Планшеты Xiaomi</field>
         <field name="description" type="TextField"> </field>
-    </object>    <object model="catalog.category" pk="176">
-        <field name="category_name" type="CharField">Смартфоны One Plus</field>
+    </object>    <object model="catalog.category" pk="6">
+        <field name="category_name" type="CharField">Смартфоны</field>
         <field name="description" type="TextField"> </field>
     </object>    <object model="catalog.category" pk="120">
         <field name="category_name" type="CharField">Смартфоны Samsung</field>

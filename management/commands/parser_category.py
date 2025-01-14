@@ -1,5 +1,13 @@
 import re
 
+# удалить все данные
+# python manage.py shell
+# from catalog.models import Category
+# Category.objects.all().delete()
+#
+# Загрузка фикстуры
+# python manage.py loaddata catalog_fixture.xml --format xml
+
 file_xml = '''<?xml version="1.0" encoding="utf-8"?>
 <django-objects version="1.0">
 '''
@@ -10,7 +18,7 @@ with  open('feed-yml.xml', 'r', encoding='utf-8') as file:
         content = file.readline()
         if not content:
             break
-        #print(content[:12])
+
         if content[:12] == '<category id':
             rez = re.search('[0-9]+', content)
             id = rez[0]
@@ -23,9 +31,6 @@ with  open('feed-yml.xml', 'r', encoding='utf-8') as file:
 
 file_xml += '</django-objects>'
 
-#with  open('catalog_fixture.xml', 'w', encoding='utf-8') as file:
- #   file.write(file_xml)
+with  open('../../catalog_fixture.xml', 'w', encoding='utf-8') as file:
+    file.write(file_xml)
 
-from datetime import datetime
-print(datetime.now())
-# 2025-01-13T19:02:10.793187+00:00

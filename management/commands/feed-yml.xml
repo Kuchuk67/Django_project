@@ -1,58 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<yml_catalog date="2025-01-13T15:37">
+<yml_catalog date="2025-01-14T03:37">
 <shop>
-<name>.ru</name>
-<company>.ru</company>
-<url>https://www..ru/</url>
+<name>***.ru</name>
+<company>**.ru</company>
+<url>https://www.***.ru/</url>
 <platform>YML for Yandex Market</platform>
-<version></version>
+<version>6.4.3</version>
 <currencies>
 <currency id="RUR" rate="1"/>
 </currencies>
 <categories>
-<category id="270">Uncategorized</category>
 <category id="328" parentId="186">Наушники и гарнитуры Apple Airpods</category>
-<category id="235" parentId="Ноутбуки 68">Ноутбуки Apple Macbook</category>
-<category id="345" parentId="30">Dyson</category>
-<category id="237" parentId="6">Смартфоны Google</category>
 <category id="327" parentId="6">Смартфоны Huawei</category>
 <category id="322" parentId="6">Смартфоны Infinix</category>
 <category id="325" parentId="6">Смартфоны OPPO</category>
 <category id="283" parentId="6">Смартфоны Realme</category>
 <category id="330" parentId="186">Наушники и гарнитуры Samsung</category>
-<category id="232" parentId="152">Samsung</category>
+<category id="232" parentId="152">Умные часы Samsung</category>
 <category id="311" parentId="6">Смартфоны Sony</category>
-<category id="329" parentId="186">Sony</category>
-<category id="320" parentId="6">Смартфоны Tecno</category>
-<category id="319" parentId="6">Смартфоны Vivo</category>
-<category id="181" parentId="7">Xiaomi</category>
-<category id="222" parentId="Ноутбуки68">Ноутбуки Xiaomi</category>
-<category id="210">Автомобильные зарядные устройства</category>
+<category id="329" parentId="186">Наушники и гарнитуры Sony</category>
 <category id="246" parentId="30">Аксессуары Xiaomi</category>
-<category id="294" parentId="246">Видеорегистраторы Xiaomi</category>
-<category id="295" parentId="246">Зарядные устройства и пауэрбанки Xiaomi</category>
-<category id="198">Защитные пленки и стекла</category>
 <category id="215">Игровые приставки</category>
-<category id="297" parentId="246">Инструменты</category>
-<category id="200">Карты памяти и USB-накопители</category>
-<category id="234" parentId="9">Клавиатуры и мыши</category>
-<category id="296" parentId="246">Мультимедиа и умный дом Xiaomi</category>
-<category id="208">Настольные лампы</category>
-<category id="186">Наушники и гарнитуры</category>
-<category id="293" parentId="246">Пылесосы Xiaomi</category>
-<category id="231" parentId="30">Рюкзаки</category>
-<category id="202">Универсальные внешние аккумуляторы</category>
-<category id="201">Чехлы и накладки</category>
 <category id="68">Ноутбуки</category>
-<category id="9">Мультимедиа</category>
-<category id="161">Акустические системы</category>
-<category id="160">Медиаплееры</category>
 <category id="159">Фитнес-браслеты</category>
 <category id="30">Аксессуары</category>
+<category id="152">Умные часы</category>
 <category id="153" parentId="152">Умные часы Apple</category>
+<category id="7">Планшеты</category>
 <category id="179" parentId="7">Планшеты Apple</category>
-<category id="122" parentId="7">Планшеты Samsung</category>
-<category id="176" parentId="6">Смартфоны One Plus</category>
+<category id="181" parentId="7">Планшеты Xiaomi</category>
+<category id="6">Смартфоны</category>
 <category id="120" parentId="6">Смартфоны Samsung</category>
 <category id="11" parentId="6">Смартфоны Apple</category>
 <category id="64" parentId="6">Смартфоны Xiaomi</category>
@@ -3371,7 +3348,7 @@ SIM-карты: Dual: nano SIM + eSIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27242" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 12 ГБ<br />
@@ -3386,7 +3363,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27241" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 12 ГБ<br />
@@ -3401,7 +3378,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27240" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 12 ГБ<br />
@@ -3416,7 +3393,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27239" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 8 ГБ<br />
@@ -3431,7 +3408,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27238" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 8 ГБ<br />
@@ -3446,7 +3423,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27237" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 8 ГБ<br />
@@ -3721,7 +3698,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27127" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.8″ (2844×1260) OLED 120 Гц<br />
 Память: встроенная 1024 ГБ, оперативная 16 ГБ<br />
@@ -3734,7 +3711,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27126" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.8″ (2844×1260) OLED 120 Гц<br />
 Память: встроенная 1024 ГБ, оперативная 16 ГБ<br />
@@ -3747,7 +3724,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27125" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.8″ (2844×1260) OLED 120 Гц<br />
 Память: встроенная 1024 ГБ, оперативная 16 ГБ<br />
@@ -3760,7 +3737,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27124" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.8″ (2844×1260) OLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 16 ГБ<br />
@@ -3773,7 +3750,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27123" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.8″ (2844×1260) OLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 16 ГБ<br />
@@ -3786,7 +3763,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27118" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.8″ (2844×1260) OLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 16 ГБ<br />
@@ -3799,7 +3776,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27116" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.8″ (2844×1260) OLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 12 ГБ<br />
@@ -3812,7 +3789,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27113" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.8″ (2844×1260) OLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 12 ГБ<br />
@@ -3825,7 +3802,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27110" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.6″ (2760×1256) LTPO OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 12 ГБ<br />
@@ -3838,7 +3815,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27107" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.6″ (2760×1256) LTPO OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 12 ГБ<br />
@@ -3851,7 +3828,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27105" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.78″ (3200×1440) AMOLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 16 ГБ<br />
@@ -3864,7 +3841,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27104" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.78″ (3200×1440) AMOLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 16 ГБ<br />
@@ -3877,7 +3854,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27103" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.78″ (3200×1440) AMOLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 16 ГБ<br />
@@ -3890,7 +3867,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27100" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.78″ (3200×1440) AMOLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 12 ГБ<br />
@@ -3903,7 +3880,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27099" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.78″ (3200×1440) AMOLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 12 ГБ<br />
@@ -3916,7 +3893,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="27095" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.78″ (3200×1440) AMOLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 12 ГБ<br />
@@ -4372,7 +4349,7 @@ SIM-карты: 2 nano-SIM, гибридная</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="26211" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.73″ (3200×1440) AMOLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 16 ГБ<br />
@@ -4385,7 +4362,7 @@ SIM-карты: 2 nano-SIM, гибридная</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="26207" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.73″ (3200×1440) AMOLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 16 ГБ<br />
@@ -4515,7 +4492,7 @@ SIM-карты: 2 nano-SIM, гибридная</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="26149" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.36″ (2670×1200) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 12 ГБ<br />
@@ -4530,7 +4507,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="26148" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.36″ (2670×1200) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 12 ГБ<br />
@@ -4545,7 +4522,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="26147" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.36″ (2670×1200) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 12 ГБ<br />
@@ -4560,7 +4537,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="26034" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.36″ (2670×1200) OLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 12 ГБ<br />
@@ -4575,7 +4552,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="26033" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.36″ (2670×1200) OLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 12 ГБ<br />
@@ -4590,7 +4567,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="26029" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.36″ (2670×1200) OLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 12 ГБ<br />
@@ -4845,7 +4822,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25924" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 128 ГБ, оперативная 6 ГБ<br />
@@ -4860,7 +4837,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25923" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 128 ГБ, оперативная 6 ГБ<br />
@@ -4875,7 +4852,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25922" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 128 ГБ, оперативная 6 ГБ<br />
@@ -5005,7 +4982,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25817" available="false"  >
-<categoryId>7</categoryId>
+<categoryId>181</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 11″ (1920×1200), IPS, 90 Гц<br />
 Процессор: Qualcomm Snapdragon 680<br />
@@ -5020,7 +4997,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25816" available="false"  >
-<categoryId>7</categoryId>
+<categoryId>181</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 11″ (1920×1200), IPS, 90 Гц<br />
 Процессор: Qualcomm Snapdragon 680<br />
@@ -5035,7 +5012,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25815" available="false"  >
-<categoryId>7</categoryId>
+<categoryId>181</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 11″ (1920×1200), IPS, 90 Гц<br />
 Процессор: Qualcomm Snapdragon 680<br />
@@ -5050,7 +5027,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25813" available="false"  >
-<categoryId>7</categoryId>
+<categoryId>181</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 11″ (1920×1200), IPS, 90 Гц<br />
 Процессор: Qualcomm Snapdragon 680<br />
@@ -5065,7 +5042,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25812" available="false"  >
-<categoryId>7</categoryId>
+<categoryId>181</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 11″ (1920×1200), IPS, 90 Гц<br />
 Процессор: Qualcomm Snapdragon 680<br />
@@ -5080,7 +5057,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25808" available="false"  >
-<categoryId>7</categoryId>
+<categoryId>181</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 11″ (1920×1200), IPS, 90 Гц<br />
 Процессор: Qualcomm Snapdragon 680<br />
@@ -5199,7 +5176,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25671" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2712×1220) OLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 12 ГБ<br />
@@ -5214,7 +5191,7 @@ SIM-карты: Dual: nano SIM + eSIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25670" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2712×1220) OLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 12 ГБ<br />
@@ -5229,7 +5206,7 @@ SIM-карты: Dual: nano SIM + eSIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25669" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2712×1220) OLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 12 ГБ<br />
@@ -5244,7 +5221,7 @@ SIM-карты: Dual: nano SIM + eSIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25668" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2712×1220) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -5259,7 +5236,7 @@ SIM-карты: Dual: nano SIM + eSIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25667" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2712×1220) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -5274,7 +5251,7 @@ SIM-карты: Dual: nano SIM + eSIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25663" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2712×1220) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -5289,7 +5266,7 @@ SIM-карты: Dual: nano SIM + eSIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25654" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 128 ГБ, оперативная 8 ГБ<br />
@@ -5304,7 +5281,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25653" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 128 ГБ, оперативная 8 ГБ<br />
@@ -5319,7 +5296,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25652" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 128 ГБ, оперативная 8 ГБ<br />
@@ -5334,7 +5311,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25651" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -5349,7 +5326,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25650" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -5364,7 +5341,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25646" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -5379,7 +5356,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25547" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 12 ГБ<br />
@@ -5394,7 +5371,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25546" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 12 ГБ<br />
@@ -5409,7 +5386,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25545" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 12 ГБ<br />
@@ -5424,7 +5401,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25544" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -5439,7 +5416,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25543" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -5454,7 +5431,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25538" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2400×1080) AMOLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -5730,7 +5707,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25472" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2712×1220) OLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 12 ГБ<br />
@@ -5745,7 +5722,7 @@ SIM-карты: Dual: nano SIM + eSIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25471" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2712×1220) OLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 12 ГБ<br />
@@ -5760,7 +5737,7 @@ SIM-карты: Dual: nano SIM + eSIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25470" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2712×1220) OLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 12 ГБ<br />
@@ -5775,7 +5752,7 @@ SIM-карты: Dual: nano SIM + eSIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25468" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2712×1220) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -5790,7 +5767,7 @@ SIM-карты: Dual: nano SIM + eSIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25467" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2712×1220) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -5805,7 +5782,7 @@ SIM-карты: Dual: nano SIM + eSIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25462" available="true"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.67″ (2712×1220) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -6120,7 +6097,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25346" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.82″ (3168×1440) AMOLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 16 ГБ<br />
@@ -6135,7 +6112,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25345" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.82″ (3168×1440) AMOLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 16 ГБ<br />
@@ -6150,7 +6127,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25344" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.82″ (3168×1440) AMOLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 16 ГБ<br />
@@ -6165,7 +6142,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25336" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.82″ (3168×1440) AMOLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 16 ГБ<br />
@@ -6180,7 +6157,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25335" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.82″ (3168×1440) AMOLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 16 ГБ<br />
@@ -6195,7 +6172,7 @@ SIM-карты: Dual nano SIM</p>]]></description>
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="25333" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.82″ (3168×1440) AMOLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 16 ГБ<br />
@@ -6817,7 +6794,7 @@ SIM-карты: 2 nano SIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24936" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.1″ (2520×1080) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -6833,7 +6810,7 @@ SIM-карты: Dual nano SIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24935" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.1″ (2520×1080) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -6849,7 +6826,7 @@ SIM-карты: Dual nano SIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24931" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.1″ (2520×1080) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -6865,7 +6842,7 @@ SIM-карты: Dual nano SIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24930" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.5″ (3840×1644) OLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 12 ГБ<br />
@@ -6881,7 +6858,7 @@ SIM-карты: Dual nano SIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24929" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.5″ (3840×1644) OLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 12 ГБ<br />
@@ -6897,7 +6874,7 @@ SIM-карты: Dual nano SIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24928" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.5″ (3840×1644) OLED 120 Гц<br />
 Память: встроенная 512 ГБ, оперативная 12 ГБ<br />
@@ -6913,7 +6890,7 @@ SIM-карты: Dual nano SIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24927" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.5″ (3840×1644) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 12 ГБ<br />
@@ -6929,7 +6906,7 @@ SIM-карты: Dual nano SIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24926" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.5″ (3840×1644) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 12 ГБ<br />
@@ -6945,7 +6922,7 @@ SIM-карты: Dual nano SIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24922" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.5″ (3840×1644) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 12 ГБ<br />
@@ -6961,7 +6938,7 @@ SIM-карты: Dual nano SIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24912" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.7″ (1344×2992) LTPO OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 12 ГБ<br />
@@ -6977,7 +6954,7 @@ SIM-карты: Dual: nano SIM + eSIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24911" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.7″ (1344×2992) LTPO OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 12 ГБ<br />
@@ -6993,7 +6970,7 @@ SIM-карты: Dual: nano SIM + eSIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24910" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.7″ (1344×2992) LTPO OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 12 ГБ<br />
@@ -7009,7 +6986,7 @@ SIM-карты: Dual: nano SIM + eSIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24909" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.7″ (1344×2992) LTPO OLED 120 Гц<br />
 Память: встроенная 128 ГБ, оперативная 12 ГБ<br />
@@ -7025,7 +7002,7 @@ SIM-карты: Dual: nano SIM + eSIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24908" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.7″ (1344×2992) LTPO OLED 120 Гц<br />
 Память: встроенная 128 ГБ, оперативная 12 ГБ<br />
@@ -7041,7 +7018,7 @@ SIM-карты: Dual: nano SIM + eSIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24904" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.7″ (1344×2992) LTPO OLED 120 Гц<br />
 Память: встроенная 128 ГБ, оперативная 12 ГБ<br />
@@ -7057,7 +7034,7 @@ SIM-карты: Dual: nano SIM + eSIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24903" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.2″ (2400×1080) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -7073,7 +7050,7 @@ SIM-карты: Dual: nano SIM + eSIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24902" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.2″ (2400×1080) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -7089,7 +7066,7 @@ SIM-карты: Dual: nano SIM + eSIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24901" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.2″ (2400×1080) OLED 120 Гц<br />
 Память: встроенная 256 ГБ, оперативная 8 ГБ<br />
@@ -7105,7 +7082,7 @@ SIM-карты: Dual: nano SIM + eSIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24900" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.2″ (2400×1080) OLED 120 Гц<br />
 Память: встроенная 128 ГБ, оперативная 8 ГБ<br />
@@ -7121,7 +7098,7 @@ SIM-карты: Dual: nano SIM + eSIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24899" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.2″ (2400×1080) OLED 120 Гц<br />
 Память: встроенная 128 ГБ, оперативная 8 ГБ<br />
@@ -7137,7 +7114,7 @@ SIM-карты: Dual: nano SIM + eSIM<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24895" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.2″ (2400×1080) OLED 120 Гц<br />
 Память: встроенная 128 ГБ, оперативная 8 ГБ<br />
@@ -8778,7 +8755,7 @@ SIM-карты: 2<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24522" available="false"  >
-<categoryId>7</categoryId>
+<categoryId>181</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 11″ (2880×1800), IPS, 144 Гц<br />
 Процессор: Qualcomm Snapdragon 870<br />
@@ -8796,7 +8773,7 @@ SIM-карты: 2<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24521" available="false"  >
-<categoryId>7</categoryId>
+<categoryId>181</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 11″ (2880×1800), IPS, 144 Гц<br />
 Процессор: Qualcomm Snapdragon 870<br />
@@ -8814,7 +8791,7 @@ SIM-карты: 2<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24520" available="false"  >
-<categoryId>7</categoryId>
+<categoryId>181</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 11″ (2880×1800), IPS, 144 Гц<br />
 Процессор: Qualcomm Snapdragon 870<br />
@@ -8832,7 +8809,7 @@ SIM-карты: 2<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24519" available="false"  >
-<categoryId>7</categoryId>
+<categoryId>181</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 11″ (2880×1800), IPS, 144 Гц<br />
 Процессор: Qualcomm Snapdragon 870<br />
@@ -8850,7 +8827,7 @@ SIM-карты: 2<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24518" available="false"  >
-<categoryId>7</categoryId>
+<categoryId>181</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 11″ (2880×1800), IPS, 144 Гц<br />
 Процессор: Qualcomm Snapdragon 870<br />
@@ -8868,7 +8845,7 @@ SIM-карты: 2<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="24517" available="false"  >
-<categoryId>7</categoryId>
+<categoryId>181</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 11″ (2880×1800), IPS, 144 Гц<br />
 Процессор: Qualcomm Snapdragon 870<br />
@@ -10122,7 +10099,7 @@ SIM-карты: 2<br />
 <currencyId>RUR</currencyId>
 </offer>
 <offer id="22376" available="false"  >
-<categoryId>6</categoryId>
+<categoryId>64</categoryId>
 <delivery>true</delivery>
 <description><![CDATA[<p>Экран: 6.5″ (3840×1644) OLED 120 Гц<br />
 Встроенная память: 512 ГБ<br />

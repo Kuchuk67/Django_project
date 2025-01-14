@@ -2,6 +2,9 @@ import re
 from datetime import datetime
 dt = datetime.now()
 
+# Загрузка фикстуры
+# python manage.py loaddata product_fixture.xml --format xml
+
 file_xml = '''<?xml version="1.0" encoding="utf-8"?>
 <django-objects version="1.0">
 '''
@@ -45,8 +48,9 @@ for offer in offers:
     rez = re.search("(name>)([^}]+)(</name)", offer)
     name = (rez[0])[5:-6]
 
-    rez = re.search("(cture>)([^}]+)(</pict)", offer)
-    img = (rez[0])[6:-6]
+    #rez = re.search("(cture>)([^}]+)(</pict)", offer)
+    #img = (rez[0])[6:-6]
+    img = ' ' # заглушка
 
     rez = re.search("(rice>)([0-9]+)<", offer)
     price = int((rez[0])[5:-1])
@@ -66,7 +70,7 @@ for offer in offers:
 
 file_xml += '</django-objects>'
 
-with  open('product_fixture.xml', 'w', encoding='utf-8') as file:
+with  open('../../product_fixture.xml', 'w', encoding='utf-8') as file:
     file.write(file_xml)
 
 
