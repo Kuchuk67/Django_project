@@ -5,7 +5,7 @@ from django.db import models
 
 class Category(models.Model):
     category_name = models.CharField(max_length=150, verbose_name='категория')
-    description = models.TextField(verbose_name='описание')
+    description = models.TextField(verbose_name='описание', null=True, blank=True, )
 
 
     def __str__(self):
