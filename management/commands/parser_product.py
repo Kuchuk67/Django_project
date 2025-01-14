@@ -18,11 +18,8 @@ with  open('feed-yml.xml', 'r', encoding='utf-8') as file:
         content = file.readline()
         if not content:
             break
-        #print(content[:8])
         print('.', end="")
         if content[:10] == '<offer id=':
-
-            #
             i +=1
             print("offer ",i)
             record = True
