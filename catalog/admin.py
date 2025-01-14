@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Category
+from .models import Product, Category, PageBlock
 
 # Register your models here.
 
@@ -14,4 +14,11 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'price')
     search_fields = ('name', 'description', 'category')
     list_filter = ('category',)
+
+
+@admin.register(PageBlock)
+class PageBlockAdmin(admin.ModelAdmin):
+    list_display = ('title', 'author', 'created_at', 'updated_at')
+    search_fields = ('title',)
+    list_filter = ('author',)
 

@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -34,3 +35,19 @@ class Product(models.Model):
         verbose_name_plural = 'Товары'
         ordering = ['created_at']
 
+
+class PageBlock(models.Model):
+    title = models.CharField(max_length=150, verbose_name='Название блока')
+    text = models.TextField(verbose_name='текстовой блок', null=True, blank=True, )
+    author = models.ForeignKey(User, verbose_name='Автор', on_delete=models.PROTECT)
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='дата создания')
+    updated_at = models.DateTimeField(auto_now_add=True, verbose_name='дата последнего изменения')
+
+
+    def __str__(self):
+        return f'{self.text}'
+
+    class Meta:
+        verbose_name = 'Текстовой Блок'
+        verbose_name_plural = 'Текстовые Блоки'
+        ordering = ['created_at']

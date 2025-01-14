@@ -1,8 +1,8 @@
 # Django_project
 проект  интернет-магазина на фрейморке Django 
-#### Django + PostgreSQL + bootstrap-5
+#### Django + PostgreSQL + bootstrap-5 + XML
 
-## Установка
+## Установка Интернет-магазина
 Проект работает с зависимостями под управлением poetry 
 ### Установка виртуального окружения
 ```
@@ -26,6 +26,17 @@ ALTER DATABASE catalog_shop OWNER TO user_catalog;
 ### Создание пользователя для админпанели
 ```
  python manage.py createsuperuser
+```
+
+### Загрузка демоданных
+Загрузка данных происходит из фида для Яндекс-Маркета feed-yml.xml
+```
+/catalog/management/commands/feed-yml.xml
+```
+Обновление данных (старые данные удаляются) выполняется командой
+```
+python manage.py add_products
+
 ```
 
 

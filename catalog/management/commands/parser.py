@@ -73,7 +73,7 @@ def parser_xml_product():
         category_id = (rez[0])[3:-1]
 
         rez = re.search("(DATA)([^}]+)]]", offer)
-        description = (rez[0])[3:-2]
+        description = (rez[0])[5:-2]
 
         rez = re.search("(name>)([^}]+)(</name)", offer)
         name = (rez[0])[5:-6]
