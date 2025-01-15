@@ -18,32 +18,145 @@
 
         </div>
 
+        <div class="row gx-5 p-3">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                     <div class="carousel-item active "  data-bs-interval="3000">
+                          <div class="row ">
+                                <div class="col ">
+                                    <div class="showcase_product">
+                                        <div class="showcase_product_title">{{ name1 }}</div>
+                                        <div class="showcase_img"> <img src="media/{{ image1 }}" /> </div>
+                                        <div class="product_price">{{ price1 }} ₽</div>
+                                        <div class="product_description">{{ description1 }}</div>
+                                        <div class="button_in_basket">Купить</div>
+                                    </div>
+                                </div>
+                                <div class="col showcase_col_2">
+                                    <div class="showcase_product">
+                                        <div class="showcase_product_title">{{ name2 }}</div>
+                                        <div class="showcase_img"> <img src="media/{{ image2 }}" /> </div>
+                                        <div class="product_price">{{ price2 }} ₽</div>
+                                        <div class="product_description">{{ description2 }}</div>
+                                        <div class="button_in_basket">Купить</div>
+                                    </div>
+                                </div>
+                                <div class="col showcase_col_3">
+                                    <div class="showcase_product">
+                                        <div class="showcase_product_title">{{ name3 }}</div>
+                                        <div class="showcase_img"> <img src="media/{{ image3 }}" /> </div>
+                                        <div class="product_price">{{ price3 }} ₽</div>
+                                        <div class="product_description">{{ description3 }}</div>
+                                        <div class="button_in_basket">Купить</div>
+                                    </div>
+                                </div>
+                          </div>
+                     </div>
+                    <div class="carousel-item"  data-bs-interval="3000">
+                        <div class="row ">
+                                <div class="col ">
+                                    <div class="showcase_product">
+                                        <div class="showcase_product_title">{{ name4 }}</div>
+                                        <div class="showcase_img"> <img src="media/{{ image4 }}" /> </div>
+                                        <div class="product_price">{{ price4 }} ₽</div>
+                                        <div class="product_description">{{ description4 }}</div>
+                                        <div class="button_in_basket">Купить</div>
+                                    </div>
+                                </div>
+                                <div class="col showcase_col_2">
+                                    <div class="showcase_product">
+                                        <div class="showcase_product_title">{{ name5 }}</div>
+                                        <div class="showcase_img"> <img src="media/{{ image5 }}" /> </div>
+                                        <div class="product_price">{{ price5 }} ₽</div>
+                                        <div class="product_description">{{ description5 }}</div>
+                                        <div class="button_in_basket">Купить</div>
+                                    </div>
+                                </div>
+                                <div class="col showcase_col_3">
+                                    <div class="showcase_product">
+                                        <div class="showcase_product_title">{{ name6 }}</div>
+                                        <div class="showcase_img"> <img src="media/{{ image6 }}" /> </div>
+                                        <div class="product_price">{{ price6 }} ₽</div>
+                                        <div class="product_description">{{ description6 }}</div>
+                                        <div class="button_in_basket">Купить</div>
+                                    </div>
+                                </div>
+                          </div>
+                    </div>
+                    <div class="carousel-item"  data-bs-interval="3000">
+                        <div class="row ">
+                                <div class="col ">
+                                    <div class="showcase_product">
+                                        <div class="showcase_product_title">{{ name7 }}</div>
+                                        <div class="showcase_img"> <img src="media/{{ image7 }}" /> </div>
+                                        <div class="product_price">{{ price7 }} ₽</div>
+                                        <div class="product_description">{{ description7 }}</div>
+                                        <div class="button_in_basket">Купить</div>
+                                    </div>
+                                </div>
+                                <div class="col showcase_col_2">
+                                    <div class="showcase_product">
+                                        <div class="showcase_product_title">{{ name8 }}</div>
+                                        <div class="showcase_img"> <img src="media/{{ image8 }}" /> </div>
+                                        <div class="product_price">{{ price8 }} ₽</div>
+                                        <div class="product_description">{{ description8 }}</div>
+                                        <div class="button_in_basket">Купить</div>
+                                    </div>
+                                </div>
+                                <div class="col showcase_col_3">
+                                    <div class="showcase_product">
+                                        <div class="showcase_product_title">{{ name9 }}</div>
+                                        <div class="showcase_img"> <img src="media/{{ image9 }}" /> </div>
+                                        <div class="product_price">{{ price9 }} ₽</div>
+                                        <div class="product_description">{{ description9 }}</div>
+                                        <div class="button_in_basket">Купить</div>
+                                    </div>
+                                </div>
+                          </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                  </button>
+            </div>
+        </div>
+        <!--
         <div class="row  gx-5">
             <div class="col ">
                 <div class="showcase_product">
                     <div class="showcase_product_title">Товар 1</div>
-                    <div class="product_price">100 ₽</div>
-                    <div class="product_description">Краткое описание товара, его назначение и достоинства</div>
+                    <div class="product_price">{{ price }} ₽</div>
+                    <div class="product_description">{{ description }}</div>
                     <div class="button_in_basket">Купить</div>
                 </div>
             </div>
             <div class="col ">
                 <div class="showcase_product">
                     <div class="showcase_product_title">Товар 1</div>
-                    <div class="product_price">100 ₽</div>
-                    <div class="product_description">Краткое описание товара, его назначение и достоинства</div>
+                    <div class="product_price">{{ price }} ₽</div>
+                    <div class="product_description">{{ description }}</div>
                     <div class="button_in_basket">Купить</div>
                 </div>
             </div>
             <div class="col ">
                 <div class="showcase_product">
                     <div class="showcase_product_title">Товар 1</div>
-                    <div class="product_price">100 ₽</div>
-                    <div class="product_description">Краткое описание товара, его назначение и достоинства</div>
+                    <div class="product_price">{{ price }} ₽</div>
+                    <div class="product_description">{{ description }}</div>
                     <div class="button_in_basket">Купить</div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
 
 

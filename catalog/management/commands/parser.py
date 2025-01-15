@@ -1,9 +1,9 @@
 import re
 import os
 from datetime import datetime
+from config.settings import BASE_DIR
 
-
-file_xml_name = os.path.join('catalog', 'management', 'commands', 'feed-yml.xml')
+file_xml_name = os.path.join(BASE_DIR,'catalog', 'management', 'commands', 'feed-yml.xml')
 
 
 def parser_xml_category():
@@ -81,7 +81,8 @@ def parser_xml_product():
         # rez = re.search("(cture>)([^}]+)(</pict)", offer)
         # img = (rez[0])[6:-6]
         img = ' '  # заглушка
-
+        if int(id_) in [25086,27626,27738,27783,27834,28094,28328,28483,27431,27181]:
+            img = 'images_products/'+str(id_)+'.png'
         rez = re.search("(rice>)([0-9]+)<", offer)
         price = int((rez[0])[5:-1])
 
@@ -100,3 +101,8 @@ def parser_xml_product():
 
     with  open('product_fixture.xml', 'w', encoding='utf-8') as file:
         file.write(file_xml)
+
+
+
+print(parser_xml_category())
+print(parser_xml_product())
