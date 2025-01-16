@@ -1,0 +1,12 @@
+SQL_HOST = "****"
+SQL_DATABASE = "catalog_shop"
+SQL_USER = "*****"
+SQL_PASS = "**********"
+SQL_PORT = 5432
+
+SCRT_KEY = "*****"
+
+
+# CREATE database catalog_shop;
+# CREATE USER user_catalog WITH PASSWORD '987654321';
+# ALTER DATABASE catalog_shop OWNER TO user_catalog;
