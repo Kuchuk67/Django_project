@@ -45,6 +45,8 @@ python manage.py add_products
 Созданы страницы:
 * /home/
 * /contacts/
+* /category/
+* /product/...
 
 ## templates
 ### head.html
@@ -56,6 +58,12 @@ python manage.py add_products
 ### contacts.html
 Страница контактов 
 Форма отправки POST-запроса, вывод сообщения об успешной отправке 
-
-
+### category.html
+Страница вывода категорий 
+### product_one_category.html
+Страница вывода продуктов одной категории
+### page_links.html
+Блок вывода пагониции страниц
+### product_single.html
+Страница вывода карточки продукта
 

@@ -1,0 +1,27 @@
+<div class="p-3 d-flex justify-content-center">
+    {% if offset_min  %}
+        <a href="/"> << </a>  ...
+        {% endif %}
+
+
+        {% for offset_link in offset %}
+
+
+
+        {% if offset_link %}
+        <a href="/{{ offset_link }}">[{{ offset_link  }}]</a>
+        {% endif %}
+
+        {% if not offset_link %}
+        <span>[...]</span>
+        {% endif %}
+
+        {% endfor %}
+
+        {% if offset_max  %}
+         ...  <a href="/{{ offset_max  }}">  >> </a>
+        {% endif %}
+
+
+</div>
+<div class="fs-6 text-secondary text-right">  Всего: {{ count  }} товаров</div>
