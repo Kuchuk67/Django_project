@@ -17,6 +17,9 @@ poetry install
 ```
 CREATE database catalog_shop;
 CREATE USER user_catalog WITH PASSWORD '**********';
+```
+Подключится к данной БД и выполнить
+```
 ALTER DATABASE catalog_shop OWNER TO user_catalog;
 ```
 Выполнить миграции 

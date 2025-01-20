@@ -16,4 +16,4 @@ urlpatterns = [
 
 # add a flag for
 # handling the 404 error
-handler404 = 'pages.views.error_404_view'
+handler404 = 'catalog.views.error_404_view'
