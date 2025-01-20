@@ -1,10 +1,10 @@
-SQL_HOST = "****"
-SQL_DATABASE = "catalog_shop"
-SQL_USER = "*****"
-SQL_PASS = "**********"
+SQL_HOST = "localhost"
+SQL_DATABASE = "***"
+SQL_USER = "***"
+SQL_PASS = "987654321"
 SQL_PORT = 5432
 
-SCRT_KEY = "*****"
+SCRT_KEY = "pz%q8jm1wu11i-%gdx_)-o%1m40i2yrwpgqy6qav=8#*ejcklv"
 
 
 # CREATE database catalog_shop;

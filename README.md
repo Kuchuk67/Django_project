@@ -17,6 +17,9 @@ poetry install
 ```
 CREATE database catalog_shop;
 CREATE USER user_catalog WITH PASSWORD '**********';
+```
+Подключится к данной БД и выполнить
+```
 ALTER DATABASE catalog_shop OWNER TO user_catalog;
 ```
 Выполнить миграции 
@@ -45,6 +48,8 @@ python manage.py add_products
 Созданы страницы:
 * /home/
 * /contacts/
+* /category/
+* /product/...
 
 ## templates
 ### head.html
@@ -56,6 +61,12 @@ python manage.py add_products
 ### contacts.html
 Страница контактов 
 Форма отправки POST-запроса, вывод сообщения об успешной отправке 
-
-
+### category.html
+Страница вывода категорий 
+### product_one_category.html
+Страница вывода продуктов одной категории
+### page_links.html
+Блок вывода пагониции страниц
+### product_single.html
+Страница вывода карточки продукта
 

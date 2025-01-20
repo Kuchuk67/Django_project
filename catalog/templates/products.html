@@ -1,0 +1,25 @@
+{% load static %}
+<div class="row">
+
+            {% for product in products %}
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="showcase_product">
+                        <a href="/product/{{ product.id }}" >
+                            <div class="showcase_product_title">{{ product.name }}</div>
+                            <div class="showcase_img">
+                                {% if product.image != '' %}
+                                <img src="/media/{{ product.image }}"/>
+                                {% else %}
+                                <img src="{% static 'img/no_image.jpg' %}"/>
+                                {% endif %}
+
+                            </div>
+                            <div class="product_description">{{ product.description|truncatechars:100  }}</div>
+                            <div class="product_price">{{ product.price }} ₽</div>
+                        </a>
+                        <a href="#" class="btn btn-primary button_in_basket d-block">Купить</a>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>

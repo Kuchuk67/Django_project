@@ -14,11 +14,12 @@
                 {% for product in products1  %}
                 <div class="col ">
                     <div class="showcase_product">
-                        <div class="showcase_product_title">{{ product.name }}</div>
-                        <div class="showcase_img"><img src="media/{{ product.image }}"/></div>
-                        <div class="product_price">{{ product.price }} ₽</div>
-                        <div class="product_description">{{ product.description }}</div>
-                        <div class="button_in_basket">Купить</div>
+                        <a href="/product/{{ product.id }}" >
+                            <div class="showcase_product_title">{{ product.name }}</div>
+                            <div class="showcase_img"><img src="/media/{{ product.image }}"/></div>
+                            <div class="product_price">{{ product.price }} ₽</div>
+                        </a>
+                        <a href="#" class="btn btn-primary button_in_basket d-block">Купить</a>
                     </div>
                 </div>
                 {% endfor %}
@@ -33,11 +34,24 @@
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Предыдущий</span>
+        <span class="visually-hidden"></span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
             data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Следующий</span>
+        <span class="visually-hidden"></span>
     </button>
 </div>
+
+<script>
+    // Выравнивание блоков название .showcase_product_title по высоте
+    $(function(){
+	var column = 0;
+	$('.showcase_product_title').each(function(){
+		h = $(this).height();
+		if (h > column) {
+			column = h;
+		}
+	}).height(column);
+});
+</script>

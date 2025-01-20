@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class Category(models.Model):
     category_name = models.CharField(max_length=150, verbose_name='категория')
     description = models.TextField(verbose_name='описание', null=True, blank=True, )
-
+    image = models.ImageField(upload_to='images_cat/',  null=True, blank=True, verbose_name='изображение')
 
     def __str__(self):
         return f'{self.category_name}'

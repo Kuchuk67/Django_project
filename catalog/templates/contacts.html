@@ -1,29 +1,26 @@
-<!DOCTYPE html>
-<html lang="ru">
-{% include 'head.html' %}
-<body>
-    {% include 'menu.html' %}
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
 
-
-
-    <div class="fon"><div class=" container-lg">
+<div class="fon">
+    <div class=" container-lg">
 
         <div class="title">
             <h1>Контакты</h1>
         </div>
-                {% if request.status_post %}
-            <div  id="top-alert" class=" alert alert-success alert-dismissible fade show" role="alert">
+        {% if request.status_post %}
+        <div id="top-alert" class=" alert alert-success alert-dismissible fade show" role="alert">
 
-                Ваше сообщение отправлено!
-               <script>
-                  document.addEventListener('DOMContentLoaded', () => {
-                    setTimeout(() => {
-                      const alert = bootstrap.Alert.getOrCreateInstance('#top-alert');
-                      alert.close();
-                    }, 3000);
-                  });
-                </script>
-            </div>
+            Ваше сообщение отправлено!
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                  setTimeout(() => {
+                    const alert = bootstrap.Alert.getOrCreateInstance('#top-alert');
+                    alert.close();
+                  }, 3000);
+                });
+            </script>
+        </div>
         {% endif %}
         <div class="row  gx-5">
             <div class="col-12 col-sm-5  py-2">
@@ -62,8 +59,6 @@
 
         </div>
     </div>
+</div>
 
-    </div>
-</body>
-
-
+{% endblock %}
