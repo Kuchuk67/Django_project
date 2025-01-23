@@ -85,6 +85,7 @@
 
     /* КАТАЛОГ  */
 
+.pagination {justify-content: center;}
 .catalog {padding-bottom: 50px;}
 .img_catalog{}
 .product_description{}

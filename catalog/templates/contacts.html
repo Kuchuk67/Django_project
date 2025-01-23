@@ -50,8 +50,10 @@
             <div class="col-12 col-sm-7 py-2">
                 <div class="card text-bg-primary">
                     <div class="card-body">
-                        <h2>{{ contacts_title }}</h2>
-                        {{ contacts_txt | safe}}
+                        {% for i in  contact_text %}
+                            <h2>{{ i.title }}</h2>
+                            {{ i.text | safe}}
+                        {% endfor %}
                     </div>
                 </div>
             </div>
