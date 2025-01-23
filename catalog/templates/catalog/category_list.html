@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="fon">
+    <img src="{% static 'img/header.jpg' %}" width="100%">
+    <div class=" container-lg">
+
+        <div class="title  d-flex  flex-column justify-content-center">
+            <h1>Категории</h1>
+        </div>
+
+        <!-- тут будут все категории -->
+        <div class="row">
+            {% for category in categories %}
+            <div class="col-6 col-sm-4 col-lg-3 col-xl-3">
+                <div class="category">
+
+                        <a href="/category/{{ category.id }}" >
+                            <div class="category_title">{{ category.category_name }}</div>
+                            <div class="category_img">
+                                {% if category.image  %}
+                                <img src="/media/{{ category.image }}" width="100%"/>
+                                {% else %}
+                                <img src="{% static 'img/no_foto_cat.jpg' %}"  width="100%"/>
+                                {% endif %}
+
+                            </div>
+                            <div class="category_description">{{ category.description|truncatechars:100  }}</div>
+
+                        </a>
+
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+
+
+
+
+
+        <div class="row gx-5 p-3 ">
+            <div class="d-flex justify-content-center"><h3>Последние поступления</h3></div>
+            {% include 'showcase_product.html' %}
+        </div>
+
+    </div>
+</div>
+{% endblock %}

@@ -5,6 +5,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import  PageBlock, Product, Category
 from catalog.src.new_products import new_product
 from catalog.src.offset import offset_product
+from django.views.generic import ListView, DetailView
 
 # Create your views here.
 
@@ -24,7 +25,7 @@ def home(request,offset=1):
 
 
 def contacts(request):
-    """ Страница контактов"""
+    
     if request.method == 'POST':
         # Получение данных из формы
         name = request.POST.get('name')
@@ -42,11 +43,38 @@ def contacts(request):
 
     return render(request, 'contacts.html', context=data_c)
 
-def single(request,pk=False):
+
+
+
+'''def single(request,pk=False):
     """ Страница карточка товара"""
     data = new_product()
     data['product'] = get_object_or_404(Product, id=pk)
-    return render(request, 'product_single.html', context=data)
+    return render(request, 'product_single.html', context=data)'''
+
+class ProductDetailView(DetailView):
+    """ Страница карточка товара"""
+    model = Product
+    context_object_name = 'product'
+
+    def get_context_data(self, **kwargs):
+        """ Добавляем данные для слайдера 'Последние поступления' """
+        context = super().get_context_data(**kwargs)
+        context['showcase_product'] = new_product()
+        return context
+
+
+
+class CategoryListView(ListView):
+    """ Страница категоии"""
+    model = Category
+    context_object_name = 'categories'
+
+    def get_context_data(self, **kwargs):
+        """ Добавляем данные для слайдера 'Последние поступления' """
+        context = super().get_context_data(**kwargs)
+        context['showcase_product'] = new_product()
+        return context
 
 
 def category(request, pk=False, offset=1):

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="fon">
+    <div class=" container-lg">
+        <div class="title">
+            <h1>{{ product.name }}</h1>
+          </div>
+          <div class="row">
+            <div class="col-6 d-flex  justify-content-center">
+                <img src="/media/{{ product.image }}" width="100%">
+            </div>
+            <div class="col-6">
+                <p>{{ product.description  | safe }}</p>
+              <div class="product_price">{{ product.price }} ₽</div>
+
+                        <a href="#" class="btn btn-primary button_in_basket d-block">Купить</a>
+            </div>
+          </div>
+
+
+
+
+        <div class="row gx-5 p-3 ">
+          <div class="d-flex justify-content-center"><h3 >Последние поступления</h3></div>
+
+            {% include 'showcase_product.html' %}
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}

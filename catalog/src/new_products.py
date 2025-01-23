@@ -1,6 +1,6 @@
 from catalog.models import Category, Product
 
-def new_product() -> dict:
+def new_product() -> list:
     """ Вернет из какждой категории по одному последнему продукту
     Возвращает словарь с ключом ID продуктов и значение: словарь с данными"""
     all_cat =  Category.objects.all()
@@ -34,11 +34,11 @@ def new_product() -> dict:
 
 
     data_showcase_id.sort(reverse=True)
-    data['showcase_product'] = []
-    data['showcase_product'].append(Product.objects.filter(id__in = data_showcase_id[0:3]))
-    data['showcase_product'].append(Product.objects.filter(id__in=data_showcase_id[3:6]))
-    data['showcase_product'].append(Product.objects.filter(id__in=data_showcase_id[6:9]))
-    return data
+    result_ = []
+    result_.append(Product.objects.filter(id__in = data_showcase_id[0:3]))
+    result_.append(Product.objects.filter(id__in=data_showcase_id[3:6]))
+    result_.append(Product.objects.filter(id__in=data_showcase_id[6:9]))
+    return result_
 
 
 def data_product() -> dict:
