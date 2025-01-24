@@ -16,7 +16,9 @@ urlpatterns = [
     #path('category/<int:pk>', views.category, name='category'),
     #path('category/', views.category, name='categories'),
     path('category/', views.CategoryListView.as_view(), name='categories'),
-    path('create/',views.ProductCreateView.as_view(), name='create')
+    path('create/',views.ProductCreateView.as_view(), name='create'),
+    path('product/<int:pk>/edit/',views.ProductUpdateView.as_view(), name='edit'),
+    path('product/<int:pk>/delete/',views.ProductDeleteView.as_view(), name='delete')
 ]
 
 # add a flag for

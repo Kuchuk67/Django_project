@@ -1,13 +1,9 @@
-from gc import get_objects
-from xml.dom import NotFoundErr
-
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from .models import PageBlock, Product, Category
 from catalog.src.new_products import new_product
-from catalog.src.offset import offset_product
-from django.views.generic import ListView, DetailView, TemplateView
-from django.views.generic.edit import CreateView, UpdateView
-from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy, reverse
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
@@ -35,17 +31,27 @@ class ProductListView(ListView):
 
 
 class ProductCreateView(LoginRequiredMixin, CreateView ):
-    login_url = "/admin/"
-    #redirect_field_name = "redirect_to"
+    login_url = "/admin/login/"
+    redirect_field_name = 'next'
 
     model = Product
     fields = ['name', 'description', 'image', 'category', 'price']
     success_url = reverse_lazy('catalog:product')
 
 
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(LoginRequiredMixin, UpdateView):
+    login_url = "/admin/login/"
+    redirect_field_name = 'next'
+
     model = Product
     fields = ['name', 'description', 'image', 'category', 'price']
+
+    def get_success_url(self):
+        return reverse('catalog:single', kwargs={'pk': self.object.pk})
+
+
+class ProductDeleteView(LoginRequiredMixin, DeleteView):
+    model = Product
     success_url = reverse_lazy('catalog:product')
 
 
@@ -82,6 +88,7 @@ class CategoryListView(ListView):
     extra_context = {'showcase_product': new_product()}
 
 
-def error_404_view(request, exception):
+
+def error_404_view(request):
     """ Страница 404"""
     return render(request, '404.html')
