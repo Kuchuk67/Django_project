@@ -13,6 +13,9 @@
                 <img src="/media/{{ product.image }}" width="100%">
             </div>
             <div class="col-6">
+                        {% if perms.app_name.change_article %}
+                            <a class="btn btn-primary" href="catalog:edit">Редактировать товар</a>
+                        {% endif %}
                 <p>{{ product.description  | safe }}</p>
               <div class="product_price">{{ product.price }} ₽</div>
 
