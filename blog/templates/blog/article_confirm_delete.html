@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="fon">
+    <div class=" container-lg">
+        <div class="title">
+            <h1>{{ article.title }}</h1>
+        </div>
+        <div class="row">
+                          <div class="col-3">
+                              <img src="/media/{{ article.image }}" width="100%" >
+
+                          </div>
+                          <div class="col-9">
+
+                                      {% if perms.app_name.change_article %}
+                                          <form method="POST">
+                                                  {% csrf_token %}
+                                              <p>Действительно удалить {{ article.name }}</p>
+                                              <button type="submit" class="btn btn-primary">Удалить</button>
+                                              <a href="{% url 'blog:articles' %}" class="btn btn-secondary">Отмена</a>
+                                          </form>
+                                      {% endif %}
+                                      <div class="date_published">{{ article.date_published | date:"d M Y"}}</div>
+                                      {{ article.text  | safe }}
+                          </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

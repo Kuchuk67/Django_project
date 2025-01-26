@@ -27,6 +27,7 @@ ALTER DATABASE catalog_shop OWNER TO user_catalog;
  python manage.py migrate
 ```
 ### Создание пользователя для админпанели
+для создания и редактированиязаписей необходима автоизация
 ```
  python manage.py createsuperuser
 ```
@@ -39,6 +40,7 @@ ALTER DATABASE catalog_shop OWNER TO user_catalog;
 Обновление данных (старые данные удаляются) выполняется командой
 ```
 python manage.py add_products
+python manage.py add_articles
 
 ```
 
@@ -50,6 +52,7 @@ python manage.py add_products
 * /contacts/
 * /category/
 * /product/...
+
 
 ## templates
 ### head.html
@@ -69,4 +72,9 @@ python manage.py add_products
 Блок вывода пагониции страниц
 ### product_single.html
 Страница вывода карточки продукта
+
+# приложение Blog
+
+Созданы страницы:
+* /blog/...
 

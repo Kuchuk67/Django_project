@@ -10,3 +10,9 @@ SCRT_KEY = "pz%q8jm1wu11i-%gdx_)-o%1m40i2yrwpgqy6qav=8#*ejcklv"
 # CREATE database catalog_shop;
 # CREATE USER user_catalog WITH PASSWORD '987654321';
 # ALTER DATABASE catalog_shop OWNER TO user_catalog;
+
+EMAIL_HOST = 'smtp.****'
+EMAIL_HOST_USER = '[email protected]'
+EMAIL_HOST_PASSWORD = 'your_password'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
