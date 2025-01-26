@@ -4,4 +4,4 @@ class NewDataForm(forms.ModelForm):
     class Meta:
         model = Article
         widgets = {"date_published": forms.DateTimeInput(attrs={'type':'datetime-local'}) }
-        fields = '__all__'
+        fields = ['title', 'text', 'image',  'author','date_published', 'published']

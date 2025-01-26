@@ -55,18 +55,13 @@ class BlogDetailView(DetailView):
         return obj
 
 
-class BlogCreateView(LoginRequiredMixin, CreateView ):
-    login_url = "/admin/login/"
-    redirect_field_name = 'next'
-
+class BlogCreateView(CreateView ):
     model = Article
     form_class = NewDataForm
     success_url = reverse_lazy('blog:articles')
 
 
-class BlogUpdateView(LoginRequiredMixin, UpdateView ):
-    login_url = "/admin/login/"
-    redirect_field_name = 'next'
+class BlogUpdateView(UpdateView ):
     model = Article
     fields = ['title', 'text', 'image',  'author','date_published', 'published']
 
@@ -74,7 +69,7 @@ class BlogUpdateView(LoginRequiredMixin, UpdateView ):
         return reverse('blog:article', kwargs={'pk': self.object.pk})
 
 
-class BlogDeleteView(LoginRequiredMixin,  DeleteView):
+class BlogDeleteView(DeleteView):
     """ Удаляем запись блога"""
 
     def form_valid(self, form):

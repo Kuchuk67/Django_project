@@ -13,7 +13,7 @@
                 <img src="/media/{{ product.image }}" width="100%">
             </div>
             <div class="col-6">
-                        {% if perms.app_name.change_article %}
+
                 <form method="POST">
                     {% csrf_token %}
                 <p>Действительно удалить {{ product.name }}</p>
@@ -22,7 +22,7 @@
                 </form>
 
 
-                        {% endif %}
+
 
                 <p>{{ product.description  | safe }}</p>
               <div class="product_price">{{ product.price }} ₽</div>

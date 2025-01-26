@@ -27,21 +27,22 @@ class ProductListView(ListView):
             return queryset.filter(category=cat).order_by(*sort)
         return queryset.all().order_by(*sort)
 
-    extra_context = {'showcase_product': new_product()}
+    #extra_context = {'showcase_product': new_product()}
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data()
+        context["showcase_product"] = new_product()
+        return context
 
+class ProductCreateView(CreateView ):
 
-class ProductCreateView(LoginRequiredMixin, CreateView ):
-    login_url = "/admin/login/"
-    redirect_field_name = 'next'
 
     model = Product
     fields = ['name', 'description', 'image', 'category', 'price']
     success_url = reverse_lazy('catalog:product')
 
 
-class ProductUpdateView(LoginRequiredMixin, UpdateView):
-    login_url = "/admin/login/"
-    redirect_field_name = 'next'
+class ProductUpdateView(UpdateView):
+
 
     model = Product
     fields = ['name', 'description', 'image', 'category', 'price']
@@ -50,7 +51,7 @@ class ProductUpdateView(LoginRequiredMixin, UpdateView):
         return reverse('catalog:single', kwargs={'pk': self.object.pk})
 
 
-class ProductDeleteView(LoginRequiredMixin, DeleteView):
+class ProductDeleteView(DeleteView):
     model = Product
     success_url = reverse_lazy('catalog:product')
 
@@ -77,18 +78,26 @@ class ProductDetailView(DetailView):
     """ Страница карточка товара"""
     model = Product
     context_object_name = 'product'
-    extra_context = {'showcase_product': new_product()}
-
+    #extra_context = {'showcase_product': new_product()}
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data()
+        context["showcase_product"] = new_product()
+        return context
 
 class CategoryListView(ListView):
     """ Страница категоии"""
     model = Category
     context_object_name = 'categories'
 
-    extra_context = {'showcase_product': new_product()}
+    #extra_context = {'showcase_product': new_product()}
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data()
+        context["showcase_product"] = new_product()
+        return context
 
 
-
-def error_404_view(request):
-    """ Страница 404"""
-    return render(request, '404.html')
+def error_404_view(request, exception):
+    context = {"page_title": "404"}
+    response = render(request, '404.html', context=context)
+    response.status_code = 404
+    return response
