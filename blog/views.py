@@ -10,7 +10,8 @@ from django.core.mail import send_mail
 from django.conf import settings
 from .forms import NewDataForm
 from datetime import datetime
-
+from django.http import HttpResponseRedirect
+import os
 
 # Create your views here.
 class MyForm(forms.Form):
@@ -44,13 +45,13 @@ class BlogDetailView(DetailView):
         obj = super().get_object(queryset=queryset)
         obj.number_of_views += 1
         obj.save()
-        if obj.number_of_views == 32 :
+        if obj.number_of_views == 36 :
             try:
                 send_mail(
                     "Новое достижение",
                     f"Статья «{obj.title}» набрала 100 просмотров",
-                    "kuchukov.sergey@gmail.com",
-                    ["kuchukov.s@mail.ru"],
+                    settings.EMAIL_HOST_USER,
+                    settings.EMAIL_HOST_SEND,
                     fail_silently=False,
                 )
             except Exception as e:
@@ -83,6 +84,40 @@ class BlogUpdateView(LoginRequiredMixin, UpdateView ):
         return reverse('blog:article', kwargs={'pk': self.object.pk})
 
 
-class BlogDeleteView(LoginRequiredMixin, DeleteView):
+class DeleteFileImagesMixin:
+    def delete_file(self, request, *args, **kwargs):
+        #self.object = self.get_object()
+        print(self.object.pk)
+
+
+class BlogDeleteView(LoginRequiredMixin,  DeleteView):
+
+
+    """def delete(self, request, *args, **kwargs):
+
+        print(f"удалить {self.object.title} - {self.object.image}")
+        return super().delete(self, request, *args, **kwargs)"""
+
+    def form_valid(self, form):
+        # Удалить файл картинки
+        if self.object.image:
+            path = self.object.image.path
+            os.remove(path)
+        return  super().form_valid(form)
+
+
+
     model = Article
+    context_object_name = 'article'
     success_url = reverse_lazy('blog:articles')
+
+
+
+    """def form_valid(self, form):
+        print("elfktyb")
+        super().form_valid(self)
+        path = self.file_upload.path
+        os.remove(path)
+        #success_url = self.get_success_url()
+        #self.object.delete()
+        #return HttpResponseRedirect(success_url)"""
