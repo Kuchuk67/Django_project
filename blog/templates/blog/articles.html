@@ -1,0 +1,35 @@
+{% load static %}
+{% for article in articles %}
+
+
+
+<div class="row p-2" style="max-width:900px; margin: 0 auto;">
+
+
+            <div class="col-4">
+                            <a href="{% url 'blog:article' article.id %}" class="article_img">
+                                {% if article.image != '' %}
+                                <img src="/media/{{ article.image }}"  width="100%"/>
+                                {% else %}
+                                <img src="{% static 'img/no_image.jpg' %}"  width="100%"/>
+                                {% endif %}
+                            </a>
+            </div>
+            <div class="col-8">
+                    <div class="d-flex justify-content-between">
+                    <div class="date_published">{{ article.date_published | date:"d M Y"}}</div>
+                    <div class="date_published">просмотров: {{ article.number_of_views }}</div>
+                    </div>
+                        <a href="{% url 'blog:article' article.id %}" > <div class="showcase_product_title">{{ article.title  }}</div></a>
+                    <div class="article_text">{{ article.text | striptags | truncatechars:500    }}</div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+{% endfor %}

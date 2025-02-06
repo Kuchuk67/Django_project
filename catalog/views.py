@@ -1,75 +1,103 @@
-from gc import get_objects
-from xml.dom import NotFoundErr
-
-from django.shortcuts import render, get_object_or_404
-from .models import  PageBlock, Product, Category
+from django.shortcuts import render
+from .models import PageBlock, Product, Category
 from catalog.src.new_products import new_product
-from catalog.src.offset import offset_product
+from django.views.generic import ListView, DetailView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy, reverse
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 
-def home(request,offset=1):
-    """ Главная страница"""
-    print(request.user)
+
+class ProductListView(ListView):
+    model = Product
+    context_object_name = 'products'
+    paginate_by = 12
+
+    # Фильтрация и сортировка товаров на странице
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        # параметры сортировки
+        if sort := self.request.GET.get('sort'):
+            sort = sort.split(',')
+        else:
+            sort = ['-id']
+        # фильтрация по категориям
+        if cat := self.request.GET.get('category'):
+            return queryset.filter(category=cat).order_by(*sort)
+        return queryset.all().order_by(*sort)
+
+    #extra_context = {'showcase_product': new_product()}
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data()
+        context["showcase_product"] = new_product()
+        return context
+
+class ProductCreateView(CreateView ):
 
 
-    if offset == 0 : offset = 1
-    quantity_per_page = 12
-    data = new_product()
-    data['products'] = Product.objects.order_by('-id').all()[(offset - 1) * quantity_per_page:offset * quantity_per_page]
-    data['count'] = Product.objects.all().count()
-    data['offset'],data['offset_min'],data['offset_max'] = offset_product(offset, data['count'], quantity_per_page)
-
-    return render(request, 'home.html', context=data)
+    model = Product
+    fields = ['name', 'description', 'image', 'category', 'price']
+    success_url = reverse_lazy('catalog:product')
 
 
-def contacts(request):
-    """ Страница контактов"""
-    if request.method == 'POST':
-        # Получение данных из формы
+class ProductUpdateView(UpdateView):
+
+
+    model = Product
+    fields = ['name', 'description', 'image', 'category', 'price']
+
+    def get_success_url(self):
+        return reverse('catalog:single', kwargs={'pk': self.object.pk})
+
+
+class ProductDeleteView(DeleteView):
+    model = Product
+    success_url = reverse_lazy('catalog:product')
+
+
+class ContactsListView(ListView):
+    """ Страница контактов """
+    model = PageBlock
+    template_name = 'catalog/contacts.html'
+    context_object_name = 'contact_text'
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        return queryset.filter(pk=1)
+
+    def post(self, request, *args):
         name = request.POST.get('name')
         email = request.POST.get('email')
         message = request.POST.get('message')
         print(name, email, message)
-        request.status_post = True
-    else:
-        request.status_post = False
+        return self.get(request, *args)
 
-    b_tests = PageBlock.objects.filter(id=1)
-    data_c = {"contacts_title": '', "contacts_txt": ''}
-    for x in b_tests:
-        data_c = {"contacts_title": x.title, "contacts_txt": x.text}
 
-    return render(request, 'contacts.html', context=data_c)
-
-def single(request,pk=False):
+class ProductDetailView(DetailView):
     """ Страница карточка товара"""
-    data = new_product()
-    data['product'] = get_object_or_404(Product, id=pk)
-    return render(request, 'product_single.html', context=data)
+    model = Product
+    context_object_name = 'product'
+    #extra_context = {'showcase_product': new_product()}
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data()
+        context["showcase_product"] = new_product()
+        return context
 
+class CategoryListView(ListView):
+    """ Страница категоии"""
+    model = Category
+    context_object_name = 'categories'
 
-def category(request, pk=False, offset=1):
-    """ Страница категорий товаров"""
-    # если не выбрана категория
-    if not pk:
-        data = new_product()
-        data['categories'] = Category.objects.all()
-        return render(request, 'category.html', context=data)
-    # выбрана категория pk
-    else:
-        data = new_product()
-        quantity_per_page = 12
-        data['products'] = Product.objects.order_by('-id').filter(category=pk)[
-                           (offset - 1) * quantity_per_page:offset * quantity_per_page]
-        data['count'] = Product.objects.filter(category=pk).count()
-        data['offset'], data['offset_min'], data['offset_max'] = offset_product(offset, data['count'],
-                                                                                quantity_per_page)
-        category = Category.objects.get(pk=pk)
-        data['title'] = category.category_name
-        return render(request, 'product_one_category.html', context=data)
+    #extra_context = {'showcase_product': new_product()}
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data()
+        context["showcase_product"] = new_product()
+        return context
+
 
 def error_404_view(request, exception):
-    """ Страница 404"""
-    return render(request, '404.html')
-
+    context = {"page_title": "404"}
+    response = render(request, '404.html', context=context)
+    response.status_code = 404
+    return response

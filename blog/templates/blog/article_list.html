@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="fon">
+    <img src="{% static 'img/header.jpg' %}" width="100%">
+    <div class=" container-lg">
+
+        <div class="title  d-flex  flex-column justify-content-center">
+            <h1>Блог о цифровой техники </h1>
+            <p>Все что хотели знать про ноутбуки, телевизоры, смартфоны, планшеты, умные часы, фитнес-браслеты и другие гаджеты.</p>
+        </div>
+
+            <a class="btn btn-primary" href="{% url 'blog:create' %}">Добавить товар</a>
+
+
+        <!-- тут будет все товары -->
+
+        {% include 'pagination.html' %}
+
+        {% include 'blog/articles.html' %}
+
+        {% include 'pagination.html' %}
+
+
+
+
+
+    </div>
+</div>
+{% endblock %}

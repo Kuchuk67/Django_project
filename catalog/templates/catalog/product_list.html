@@ -12,23 +12,23 @@
             <p>Продажа техники: ноутбуки, телевизоры, смартфоны, планшеты, умные часы, фитнес-браслеты и другие гаджеты.</p>
         </div>
 
+            <a class="btn btn-primary" href="{% url 'catalog:create' %}">Добавить товар</a>
+
+
         <!-- тут будет все товары -->
-        {% if count > 12 %}
-            {% include 'page_links.html' %}
-        {% endif %}
 
-        {% include 'products.html' %}
+        {% include 'pagination.html' %}
 
-        {% if count > 12 %}
-            {% include 'page_links.html' %}
-        {% endif %}
+        {% include 'catalog/products.html' %}
+
+        {% include 'pagination.html' %}
 
 
 
 
         <div class="row gx-5 p-3 ">
             <div class="d-flex justify-content-center"><h3>Последние поступления</h3></div>
-            {% include 'showcase_product.html' %}
+            {% include 'catalog/showcase_product.html' %}
         </div>
 
     </div>
