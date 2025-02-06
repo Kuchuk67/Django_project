@@ -101,7 +101,7 @@
 
  .count_products_in_catalog{float: right;}
 
- .card-body{}
+ .errorlist{color: red; font-weight:600;}
 
 
      @media (max-width: 991px) {
