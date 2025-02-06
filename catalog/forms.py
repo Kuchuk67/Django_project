@@ -13,7 +13,14 @@ class ProductForm(forms.ModelForm):
                            'полиция',
                            'радар',
                            ]
-        super().__init__(*args, **kwargs)
+        super(ProductForm, self).__init__(*args, **kwargs)
+
+        self.fields['name'].widget.attrs.update({'class': 'form-control',})
+        self.fields['price'].widget.attrs.update({'class': 'form-control',})
+        self.fields['description'].widget.attrs.update({'class': 'form-control','placeholder': 'Введите описание товара'})
+        self.fields['category'].widget.attrs.update({'class': 'form-control',})
+        self.fields['image'].widget.attrs.update({'class': 'form-control',})
+
 
 
     class Meta:
@@ -35,3 +42,16 @@ class ProductForm(forms.ModelForm):
             if stop_word in description.lower():
                 raise forms.ValidationError('Название продукта не должно содержать стоп-слов.')
         return description
+
+    def clean_price(self):
+        price = self.cleaned_data['price']
+        if price < 0:
+            raise forms.ValidationError('Цена не может быть отрицательной.')
+        return price
+
+    def clean_image(self):
+        image = self.cleaned_data['image']
+        if type(image) is not bool:
+            if image.size > 1024 * 1024:  # 1MB
+                raise forms.ValidationError('Изображение не может быть больше 1MB.')
+        return image
