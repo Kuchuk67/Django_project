@@ -102,7 +102,8 @@
  .count_products_in_catalog{float: right;}
 
  .errorlist{color: red; font-weight:600;}
-
+ .nav-item svg   {fill: #999;}
+  .nav-item:hover svg   {fill: #eee;}
 
      @media (max-width: 991px) {
 .fon {    padding-left: 60px;}
