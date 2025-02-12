@@ -55,3 +55,5 @@ class ProductForm(forms.ModelForm):
             if image.size > 1024 * 1024:  # 1MB
                 raise forms.ValidationError('Изображение не может быть больше 1MB.')
         return image
+
+

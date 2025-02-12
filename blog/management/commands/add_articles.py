@@ -2,6 +2,7 @@ from django.core.management.base import BaseCommand
 from blog.models import Article
 from django.core.management import call_command
 from django.contrib.auth.models import User
+from users.models import CustomUser
 
 
 class Command(BaseCommand):
@@ -10,7 +11,7 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         Article.objects.all().delete()
 
-        users = User.objects.all()[:1]
+        users = CustomUser.objects.all()[:1]
         Article.objects.get_or_create(
                                    title='Обзор флагмана Samsung Galaxy S24 Ultra: идеальный баланс между производительностью и дизайном',
                                    text="""<div class="content-text  muted777">
