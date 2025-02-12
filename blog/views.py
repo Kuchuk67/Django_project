@@ -7,7 +7,7 @@ from django import forms
 from django.forms.widgets import DateTimeInput
 from django.core.mail import send_mail
 from django.conf import settings
-from .forms import NewDataForm
+from .forms import BlogPostForm
 from datetime import datetime
 import os
 
@@ -39,7 +39,7 @@ class BlogDetailView(DetailView):
         obj = super().get_object(queryset=queryset)
         obj.number_of_views += 1
         obj.save()
-        if obj.number_of_views == 36 :
+        if obj.number_of_views == 100 :
             try:
                 send_mail(
                     "Новое достижение",
@@ -57,13 +57,14 @@ class BlogDetailView(DetailView):
 
 class BlogCreateView(CreateView ):
     model = Article
-    form_class = NewDataForm
+    form_class = BlogPostForm
     success_url = reverse_lazy('blog:articles')
 
 
 class BlogUpdateView(UpdateView ):
     model = Article
-    fields = ['title', 'text', 'image',  'author','date_published', 'published']
+    #fields = ['title', 'text', 'image',  'author','date_published', 'published']
+    form_class = BlogPostForm
 
     def get_success_url(self):
         return reverse('blog:article', kwargs={'pk': self.object.pk})

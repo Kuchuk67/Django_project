@@ -2,7 +2,8 @@ from django.core.management.base import BaseCommand
 from catalog.models import Category, Product, PageBlock
 from catalog.management.commands.parser import parser_xml_category, parser_xml_product
 from django.core.management import call_command
-from django.contrib.auth.models import User
+#from django.contrib.auth.models import User
+from users.models import CustomUser
 from datetime import datetime
 dt = str(datetime.now())+ "+03:00"
 
@@ -22,7 +23,7 @@ class Command(BaseCommand):
         call_command('loaddata', 'product_fixture.xml')
         self.stdout.write(self.style.SUCCESS('Successfully loaded data from product fixture'))
 
-        users = User.objects.all()[:1]
+        users = CustomUser.objects.all()[:1]
         PageBlock.objects.get_or_create(id=1,
                                         title='Наши контакты',
                                         text="""<p><b>Адрес:</b> Иркутск, ул. Ленина, д. 1</p>

@@ -5,6 +5,7 @@ from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy, reverse
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .forms import ProductForm
 
 # Create your views here.
 
@@ -34,19 +35,14 @@ class ProductListView(ListView):
         return context
 
 class ProductCreateView(CreateView ):
-
-
     model = Product
-    fields = ['name', 'description', 'image', 'category', 'price']
+    form_class = ProductForm
     success_url = reverse_lazy('catalog:product')
 
 
 class ProductUpdateView(UpdateView):
-
-
     model = Product
-    fields = ['name', 'description', 'image', 'category', 'price']
-
+    form_class = ProductForm
     def get_success_url(self):
         return reverse('catalog:single', kwargs={'pk': self.object.pk})
 
