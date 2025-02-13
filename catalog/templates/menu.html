@@ -76,10 +76,15 @@
             <a class="nav-link dropdown-toggle  text-white-50 d-flex align-items-center" href="#" role="button"
                data-bs-toggle="dropdown" aria-expanded="false">
                 {% if user.is_authenticated %}
-                <div class="user_avatar"><img src="{% static 'img/user.avif' %}" width="100%"></div>
-                <span class=" p-3 user_menu_txt">Пользователь</span>
+                    {% if user.avatar %}
+                        <div class="user_avatar"><img src="/media/{{ user.avatar }}" width="100%"></div>
+                    {% else %}
+                        <div class="user_avatar"><img src="/media/avatars/no_user.png" width="100%"></div>
+                    {% endif %}
+                    <span class=" p-3 user_menu_txt">{{ user.username }} </span>
                 {% else %}
-                <span class=" p-3 user_menu_txt">Авторизация</span>
+                    <div class="user_avatar"><img src="/media/avatars/door.png" width="100%"></div>
+                    <span class=" p-3 user_menu_txt">Авторизация</span>
                 {% endif %}
             </a>
             <ul class="dropdown-menu bg-secondary">
@@ -89,7 +94,7 @@
                 {% else %}
                 <li>
 
-                     <a href="{% url 'users:profile' user.pk %}" class="dropdown-item">Профиль</a>
+                     <a href="{% url 'users:profile' %}" class="dropdown-item">Профиль</a>
                 </li>
                 <li>
                     <form method="post" action="{% url 'users:logout' %}">

@@ -105,6 +105,10 @@
  .nav-item svg   {fill: #999;}
   .nav-item:hover svg   {fill: #eee;}
 
+.form_sm {margin: 0 auto;
+    max-width: 450px;}
+
+
      @media (max-width: 991px) {
 .fon {    padding-left: 60px;}
 .menu-block {  width: 60px;}

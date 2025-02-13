@@ -9,10 +9,24 @@
               <h5 class="card-title">
                         {{ object }}
                     </h5>
-             <form method="post">
+             <form method="post"  enctype="multipart/form-data" class="form_sm">
                  {% csrf_token %}
-                 {{ user_form.as_p }}
-                 {{ form.as_p }}
+                 <p>Имя:
+                     {{ form.username }}
+                 </p>
+                 <p>E-mail:
+                 {{ form.email }}
+                 </p>
+                 <img src="{{ object.avatar.url }}" width="100" height="100"/>
+                 <p>Аватарка:<br />
+
+
+
+                 {{ form.avatar }}
+                 </p>
+                 <p>Страна:
+                 {{ form.country }}
+                 </p>
                  <button class="btn btn-primary" type="submit">Сохранить</button>
                  <a href="{% url 'catalog:product' %}" class="btn btn-secondary">Отмена</a>
               </form>

@@ -20,7 +20,21 @@ class UserUpdateForm(forms.ModelForm):
     """
     Форма обновления данных пользователя
     """
+    def __init__(self, *args, **kwargs):
+        """
+        Обновление стилей формы обновления
+        """
+        super(UserUpdateForm, self).__init__(*args, **kwargs)
+        self.fields['username'].widget.attrs.update({'class': 'form-control', })
+        self.fields['email'].widget.attrs.update({'class': 'form-control', })
+        self.fields['country'].widget.attrs.update({'class': 'form-control', })
+        self.fields['avatar'].widget.attrs.update({'class': 'form-control', })
+
 
     class Meta:
         model = CustomUser
         fields = ['username', 'email', 'avatar',  'country']
+
+
+
+
