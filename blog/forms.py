@@ -9,9 +9,12 @@ from .models import Article
 """
 
 class BlogPostForm(forms.ModelForm):
+    date_published = forms.DateTimeField(
+        widget=forms.DateTimeInput(attrs={'class': 'form-control', 'type': 'datetime-local', 'title': 'дата создания'},
+                                   format='%Y-%m-%dT%H:%M'), label='Дата и время публикации')
     class Meta:
         model = Article
-        widgets = {"date_published": forms.DateTimeInput(attrs={'type': 'datetime-local'})}
+        #widgets = {"date_published": forms.DateTimeInput(attrs={'type': 'datetime-local'})}
         fields = ['title', 'text', 'image',  'author','date_published', 'published']
 
     def __init__(self, *args, **kwargs):
