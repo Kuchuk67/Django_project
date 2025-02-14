@@ -105,9 +105,37 @@
  .nav-item svg   {fill: #999;}
   .nav-item:hover svg   {fill: #eee;}
 
-.form_sm {margin: 0 auto;
+.form_sm, .form_sm_login {margin: 0 auto;
     max-width: 450px;}
 .navbar-collapse{overflow: visible; margin-top: 10px;}
+
+.form_sm_login input:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #8bbafe;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(13, 110, 253, .25);
+}
+
+.form_sm_login input {
+    display: block;
+    width: 100%;
+    min-height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
 
      @media (max-width: 991px) {
 .fon {    padding-left: 60px;}

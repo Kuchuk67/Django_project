@@ -4,11 +4,14 @@
 
 <div class="fon">
     <div class=" container-lg">
-
-        <h2>Профайл. Личные данные</h2>
+        <div class="title  d-flex  flex-column justify-content-center">
+            <h2>Профайл. Личные данные</h2>
               <h5 class="card-title">
                         {{ object }}
                     </h5>
+        </div>
+
+
              <form method="post"  enctype="multipart/form-data" class="form_sm">
                  {% csrf_token %}
                  <p>Имя:
@@ -19,7 +22,7 @@
                  </p>
 
                  {% if user.avatar %}
-                        <div class="user_avatar"><img src="/media/{{ user.avatar }}" width="100%"></div>
+                        <div class=""><img src="/media/{{ user.avatar }}" width="100px"></div>
                     {% else %}
                         <div style="background: #444;width: 100px;"><img src="/media/avatars/no_user.png" width="100" ></div>
                     {% endif %}
@@ -32,6 +35,14 @@
                  <p>Страна:
                  {{ form.country }}
                  </p>
+                 <p>Телефон:
+                 {{ form.number_phone }}
+                 </p>
+                  {% if form.number_phone.errors %}
+                        {% for error in form.number_phone.errors %}
+		                    • {{ error }}
+                        {% endfor %}
+                  {% endif %}
                  <button class="btn btn-primary" type="submit">Сохранить</button>
                  <a href="{% url 'catalog:product' %}" class="btn btn-secondary">Отмена</a>
               </form>
