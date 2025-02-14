@@ -54,6 +54,21 @@ class ProfileUpdateView(LoginRequiredMixin, UpdateView):
     form_class = UserUpdateForm
     success_url = reverse_lazy('users:profile')
     template_name = 'profile_edite.html'
+    path_img_temp = None
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        if self.object.image:
+            self.path_img_temp = self.object.image.path
+
+        return super().post(request, *args, **kwargs)
+
+
+    def form_valid(self, form):
+        # Удалить файл картинки
+        if not self.object.image and self.path_img_temp:
+            os.remove(self.path_img_temp)
+        return  super().form_valid(form)
 
 
     # Определяем текущего пользователя и грузим только его

@@ -81,7 +81,12 @@
                     {% else %}
                         <div class="user_avatar"><img src="/media/avatars/no_user.png" width="100%"></div>
                     {% endif %}
-                    <span class=" p-3 user_menu_txt">{{ user.username }} </span>
+                    {% if user.username %}
+                        <span class=" p-3 user_menu_txt">{{ user.username }} </span>
+                    {% else %}
+                        <span class=" p-3 user_menu_txt">Добро пожаловать</span>
+                    {% endif %}
+
                 {% else %}
                     <div class="user_avatar"><img src="/media/avatars/door.png" width="100%"></div>
                     <span class=" p-3 user_menu_txt">Авторизация</span>
