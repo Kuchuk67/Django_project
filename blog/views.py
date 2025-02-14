@@ -13,9 +13,9 @@ import os
 
 
 # Create your views here.
-class MyForm(forms.Form):
+"""class MyForm(forms.Form):
     datetime_field = forms.DateTimeField(widget=DateTimeInput(attrs={'type': 'datetime-local'}))
-
+"""
 
 class BlogListView(ListView):
     model = Article
@@ -55,13 +55,13 @@ class BlogDetailView(DetailView):
         return obj
 
 
-class BlogCreateView(CreateView ):
+class BlogCreateView(LoginRequiredMixin, CreateView ):
     model = Article
     form_class = BlogPostForm
     success_url = reverse_lazy('blog:articles')
 
 
-class BlogUpdateView(UpdateView ):
+class BlogUpdateView(LoginRequiredMixin, UpdateView ):
     model = Article
     #fields = ['title', 'text', 'image',  'author','date_published', 'published']
     form_class = BlogPostForm
@@ -70,7 +70,7 @@ class BlogUpdateView(UpdateView ):
         return reverse('blog:article', kwargs={'pk': self.object.pk})
 
 
-class BlogDeleteView(DeleteView):
+class BlogDeleteView(LoginRequiredMixin, DeleteView):
     """ Удаляем запись блога"""
 
     def form_valid(self, form):

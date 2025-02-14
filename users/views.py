@@ -1,10 +1,11 @@
-from django.views.generic import CreateView
 from .forms import SignUpForm, UserUpdateForm
 from django.urls import reverse_lazy
 from .models import CustomUser
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import ListView, DetailView
 from django.urls import reverse
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 # Create your views here.
 class SignUpView(CreateView):
@@ -14,28 +15,26 @@ class SignUpView(CreateView):
     success_url = reverse_lazy('users:login')
     template_name ='register.html'
 
-class ProfileDetailView(DetailView):
+
+class ProfileDetailView(LoginRequiredMixin, DetailView):
     model = CustomUser
     success_url = reverse_lazy('catalog:product')
     template_name = 'profile.html'
 
+
     # Определяем текущего пользователя и грузим только его
     def get_object(self, queryset=None):
         queryset = self.get_queryset()
         queryset = queryset.filter(pk=self.request.user.pk)
         return queryset.get()
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        #context['title'] = f'Страница пользователя: {self.object.user.username}'
-        return context
 
-class ProfileUpdateView(UpdateView):
+class ProfileUpdateView(LoginRequiredMixin, UpdateView):
     model = CustomUser
     form_class = UserUpdateForm
     success_url = reverse_lazy('users:profile')
     template_name = 'profile_edite.html'
-    #print(UpdateView.object.pk)
+
 
     # Определяем текущего пользователя и грузим только его
     def get_object(self, queryset=None):
@@ -43,9 +42,6 @@ class ProfileUpdateView(UpdateView):
         queryset = queryset.filter(pk=self.request.user.pk)
         return queryset.get()
 
-
-    #def get(self, request,  *args, **kwargs):
-       # return super().get(request, *args, **kwargs)
 
     def get_success_url(self):
         return reverse('catalog:product')

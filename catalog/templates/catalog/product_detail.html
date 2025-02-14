@@ -14,9 +14,10 @@
             </div>
             <div class="col-6">
 
+                            {% if user.is_authenticated %}
                             <a class="btn btn-primary" href="{% url 'catalog:edit' product.id %} ">Редактировать товар</a>
-                             <a class="btn btn-primary" href="{% url 'catalog:delete' product.id %} ">Удалить</a>
-
+                            <a class="btn btn-primary" href="{% url 'catalog:delete' product.id %} ">Удалить</a>
+                            {% endif %}
                 <p>{{ product.description  | safe }}</p>
               <div class="product_price">{{ product.price }} ₽</div>
 
