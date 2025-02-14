@@ -16,9 +16,19 @@
                  {% csrf_token %}
                  <p>Имя:
                      {{ form.username }}
+                     {% if form.username.errors %}
+                        {% for error in form.username.errors %}
+		                    <div class="errorlist">• {{ error }}</div>
+                        {% endfor %}
+                     {% endif %}
                  </p>
                  <p>E-mail:
                  {{ form.email }}
+                 {% if form.email.errors %}
+                        {% for error in form.email.errors %}
+		                    <div class="errorlist">• {{ error }}</div>
+                        {% endfor %}
+                  {% endif %}
                  </p>
 
                  {% if user.avatar %}
@@ -31,6 +41,11 @@
 
 
                  {{ form.avatar }}
+                 {% if form.avatar.errors %}
+                        {% for error in form.avatar.errors %}
+		                    <div class="errorlist">• {{ error }}</div>
+                        {% endfor %}
+                  {% endif %}
                  </p>
                  <p>Страна:
                  {{ form.country }}
@@ -40,7 +55,7 @@
                  </p>
                   {% if form.number_phone.errors %}
                         {% for error in form.number_phone.errors %}
-		                    • {{ error }}
+                        <div class="errorlist">• {{ error }}</div>
                         {% endfor %}
                   {% endif %}
                  <button class="btn btn-primary" type="submit">Сохранить</button>

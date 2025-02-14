@@ -51,5 +51,12 @@ class UserUpdateForm(forms.ModelForm):
             raise forms.ValidationError('Номер телефона должен содержать минимум 8 цифр')
         return number_phone
 
+    def clean_avatar(self):
+        avatar = self.cleaned_data['avatar']
+        if type(avatar) is not bool and hasattr(avatar, 'size'):
+            if avatar.size > 1024 * 1024:  # 1MB
+                raise forms.ValidationError('Изображение не может быть больше 1MB.')
+        return avatar
+
 
 

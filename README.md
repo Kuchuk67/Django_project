@@ -69,12 +69,48 @@ python manage.py add_articles
 ### product_one_category.html
 Страница вывода продуктов одной категории
 ### page_links.html
-Блок вывода пагониции страниц
+Блок вывода пагонации страниц
 ### product_single.html
 Страница вывода карточки продукта
 
 # приложение Blog
 
 Созданы страницы:
-* /blog/...
+* /blog/
+* blog/article/...
+* blog/creat
+* blog/article/.../update/
+* blog/article/.../delete/
+
+## templates
+### article_confirm_delete.html
+Подтверждение удаления статьи
+### article_detail.html
+Страница статьи
+### article_form.html
+Редактирование статьи
+### article_list.html
+Выводит список статей
+### articles.html
+Отображение одной статьи в списке
+
+
+# приложение Users
+
+Созданы страницы:
+* user/signup/  
+* user/login/
+* user/logout/
+* user/profile/
+
+## templates
+### login.html
+Страница логина
+### profile.html
+Страница профайла пользователя (отключена)
+### profile_edite.html
+Страница Редактирования профайла
+### register.html
+Страница регистрации
+
 
