@@ -13,9 +13,9 @@ import os
 
 
 # Create your views here.
-class MyForm(forms.Form):
+"""class MyForm(forms.Form):
     datetime_field = forms.DateTimeField(widget=DateTimeInput(attrs={'type': 'datetime-local'}))
-
+"""
 
 class BlogListView(ListView):
     model = Article
@@ -65,12 +65,26 @@ class BlogUpdateView(UpdateView ):
     model = Article
     #fields = ['title', 'text', 'image',  'author','date_published', 'published']
     form_class = BlogPostForm
+    path_img_temp = None
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        if self.object.image:
+            self.path_img_temp = self.object.image.path
+
+        return super().post(request, *args, **kwargs)
 
     def get_success_url(self):
         return reverse('blog:article', kwargs={'pk': self.object.pk})
 
+    def form_valid(self, form):
+        # Удалить файл картинки
+        if not self.object.image and self.path_img_temp:
+            os.remove(self.path_img_temp)
+        return  super().form_valid(form)
 
-class BlogDeleteView(DeleteView):
+
+class BlogDeleteView(LoginRequiredMixin, DeleteView):
     """ Удаляем запись блога"""
 
     def form_valid(self, form):

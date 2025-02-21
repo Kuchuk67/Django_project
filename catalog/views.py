@@ -34,20 +34,20 @@ class ProductListView(ListView):
         context["showcase_product"] = new_product()
         return context
 
-class ProductCreateView(CreateView ):
+class ProductCreateView(LoginRequiredMixin, CreateView ):
     model = Product
     form_class = ProductForm
     success_url = reverse_lazy('catalog:product')
 
 
-class ProductUpdateView(UpdateView):
+class ProductUpdateView(LoginRequiredMixin, UpdateView):
     model = Product
     form_class = ProductForm
     def get_success_url(self):
         return reverse('catalog:single', kwargs={'pk': self.object.pk})
 
 
-class ProductDeleteView(DeleteView):
+class ProductDeleteView(LoginRequiredMixin, DeleteView):
     model = Product
     success_url = reverse_lazy('catalog:product')
 

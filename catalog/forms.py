@@ -51,7 +51,7 @@ class ProductForm(forms.ModelForm):
 
     def clean_image(self):
         image = self.cleaned_data['image']
-        if type(image) is not bool:
+        if type(image) is not bool and hasattr(image, 'size'):
             if image.size > 1024 * 1024:  # 1MB
                 raise forms.ValidationError('Изображение не может быть больше 1MB.')
         return image

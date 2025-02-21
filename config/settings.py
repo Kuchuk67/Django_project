@@ -23,9 +23,9 @@ SQL_PASS = os.getenv("SQL_PASS")
 SQL_PORT = os.getenv("SQL_PORT")
 
 
-#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # Это для тестирования отправки почты в процессе разработки
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+#EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 #EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 #EMAIL_FILE_PATH = "tmp_mail/"  # change this to a proper location
 
@@ -34,7 +34,6 @@ EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 EMAIL_PORT = os.getenv("EMAIL_PORT")
 EMAIL_USE_TLS = os.getenv("EMAIL_USE_TLS")
-EMAIL_USE_SSL = False
 EMAIL_HOST_SEND = ["kuchukov.s@mail.ru"]
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -161,5 +160,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+LOGOUT_REDIRECT_URL = 'catalog:product'
+LOGIN_REDIRECT_URL = 'catalog:product'
+LOGIN_URL = 'users:login'
 
 

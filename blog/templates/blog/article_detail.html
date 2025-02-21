@@ -15,9 +15,10 @@
                           </div>
                           <div class="col-9">
 
-
+                                          {% if user.is_authenticated %}
                                           <a class="btn btn-primary" href="{% url 'blog:update' article.id %} ">Редактировать товар</a>
-                                           <a class="btn btn-primary" href="{% url 'blog:delete' article.id %} ">Удалить</a>
+                                          <a class="btn btn-primary" href="{% url 'blog:delete' article.id %} ">Удалить</a>
+                                          {% endif %}
 
                                       <div class="date_published">{{ article.date_published | date:"d M Y"}}</div>
                                       {{ article.text  | safe }}
