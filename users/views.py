@@ -1,3 +1,4 @@
+import os
 from .forms import SignUpForm, UserUpdateForm
 from django.urls import reverse_lazy
 from .models import CustomUser
@@ -44,9 +45,10 @@ class ProfileDetailView(LoginRequiredMixin, DetailView):
 
     # Определяем текущего пользователя и грузим только его
     def get_object(self, queryset=None):
-        queryset = self.get_queryset()
+        """queryset = self.get_queryset()
         queryset = queryset.filter(pk=self.request.user.pk)
-        return queryset.get()
+        return queryset.get()"""
+        return self.request.user
 
 
 class ProfileUpdateView(LoginRequiredMixin, UpdateView):
@@ -73,9 +75,10 @@ class ProfileUpdateView(LoginRequiredMixin, UpdateView):
 
     # Определяем текущего пользователя и грузим только его
     def get_object(self, queryset=None):
-        queryset = self.get_queryset()
+        """queryset = self.get_queryset()
         queryset = queryset.filter(pk=self.request.user.pk)
-        return queryset.get()
+        return queryset.get()"""
+        return self.request.user
 
 
     def get_success_url(self):
