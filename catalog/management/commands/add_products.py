@@ -7,13 +7,20 @@ from users.models import CustomUser
 from datetime import datetime
 dt = str(datetime.now())+ "+03:00"
 
+
+
 class Command(BaseCommand):
     help = 'Add test books to the database'
 
     def handle(self, *args, **kwargs):
+
         Category.objects.all().delete()
         Product.objects.all().delete()
         PageBlock.objects.all().delete()
+
+
+
+
 
         parser_xml_category()
         call_command('loaddata', 'catalog_fixture.xml')

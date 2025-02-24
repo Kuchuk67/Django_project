@@ -42,7 +42,6 @@ class ProfileDetailView(LoginRequiredMixin, DetailView):
     success_url = reverse_lazy('catalog:product')
     template_name = 'profile.html'
 
-
     # Определяем текущего пользователя и грузим только его
     def get_object(self, queryset=None):
         """queryset = self.get_queryset()
@@ -60,16 +59,18 @@ class ProfileUpdateView(LoginRequiredMixin, UpdateView):
 
     def post(self, request, *args, **kwargs):
         self.object = self.get_object()
-        if self.object.image:
-            self.path_img_temp = self.object.image.path
+        if  hasattr(object, 'image'):
+            if self.object.image:
+                self.path_img_temp = self.object.image.path
 
         return super().post(request, *args, **kwargs)
 
 
     def form_valid(self, form):
         # Удалить файл картинки
-        if not self.object.image and self.path_img_temp:
-            os.remove(self.path_img_temp)
+        if hasattr(object, 'image'):
+            if not self.object.image:
+                os.remove(self.path_img_temp)
         return  super().form_valid(form)
 
 

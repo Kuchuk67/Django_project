@@ -27,6 +27,8 @@ def parser_xml_category():
                 file_xml += f'''    <object model="catalog.category" pk="{id}">
             <field name="category_name" type="CharField">{name}</field>
             <field name="description" type="TextField"> </field>
+            
+            
         </object>'''
     file_xml += '</django-objects>'
     with  open('catalog_fixture.xml', 'w', encoding='utf-8') as file:
@@ -94,6 +96,8 @@ def parser_xml_product():
             <field name="price" type="IntegerField">{price}</field>
             <field name="created_at" type="DateTimeField">{dt}+03:00</field>
             <field name="updated_at" type="DateTimeField">{dt}+03:00</field>
+            <field name="unpublish_product" type="CharField">published</field>
+            <field name="owner" type="IntegerField">3</field>
         </object>
     '''
 

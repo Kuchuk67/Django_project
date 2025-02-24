@@ -30,7 +30,17 @@ class Product(models.Model):
     price = models.IntegerField( verbose_name='цена')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='дата создания')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='дата последнего изменения')
+    owner =models.ForeignKey(CustomUser, verbose_name='Автор', on_delete=models.PROTECT)
+    STATUS_CHOICES = [
+        ('published', 'Опубликовано'),
+        ('unpublished', 'Остановлено'),
+        ('pending', 'На утверждении'),
+     ]
+    unpublish_product = models.CharField(max_length=17, verbose_name='наименование', choices=STATUS_CHOICES, default='pending')
 
+    """def save(self, *args, **kwargs):
+        self.owner = self.request.user.id
+        super(Product, self).save(*args, **kwargs)"""
 
     def __str__(self):
         return f'{self.name} - {self.price}'
@@ -39,6 +49,9 @@ class Product(models.Model):
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары'
         ordering = ['created_at']
+        permissions = [
+            ('can_unpublish_product','Может отменять публикацию продукта')
+        ]
 
 
 class PageBlock(models.Model):

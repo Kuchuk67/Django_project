@@ -14,6 +14,12 @@
                                 {% endif %}
 
                             </div>
+                            {% if product.unpublish_product == 'pending' %}
+                            <div class="badge bg-success   p-1"> {{ product.get_unpublish_product_display }} </div>
+                            {% endif %}
+                            {% if product.unpublish_product == 'unpublished' %}
+                            <div class="badge bg-danger p-1"> {{ product.get_unpublish_product_display }} </div>
+                            {% endif %}
                             <div class="product_description">{{ product.description|truncatechars:100  }}</div>
                             <div class="product_price">{{ product.price }} ₽</div>
                         </a>

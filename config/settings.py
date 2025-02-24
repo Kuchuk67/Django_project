@@ -23,9 +23,9 @@ SQL_PASS = os.getenv("SQL_PASS")
 SQL_PORT = os.getenv("SQL_PORT")
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # Это для тестирования отправки почты в процессе разработки
-#EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 #EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 #EMAIL_FILE_PATH = "tmp_mail/"  # change this to a proper location
 

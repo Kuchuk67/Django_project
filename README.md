@@ -39,6 +39,7 @@ ALTER DATABASE catalog_shop OWNER TO user_catalog;
 ```
 Обновление данных (старые данные удаляются) выполняется командой
 ```
+python manage.py add_user   
 python manage.py add_products
 python manage.py add_articles
 

@@ -1,6 +1,19 @@
 from django import forms
 from.models import Product
 
+class ProductModeratorForm(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(ProductModeratorForm, self).__init__(*args, **kwargs)
+        self.fields['unpublish_product'].widget.attrs.update({'class': 'form-control', })
+
+
+    class Meta:
+        model = Product
+        fields = ('unpublish_product',)
+        labels = {
+            'unpublish_product': 'Отключить товар',
+        }
+
 class ProductForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         self.stop_words = ['казино',
@@ -22,7 +35,6 @@ class ProductForm(forms.ModelForm):
         self.fields['image'].widget.attrs.update({'class': 'form-control',})
 
 
-
     class Meta:
         model = Product
         fields = ('name', 'price', 'description', 'category', 'image')
@@ -36,6 +48,7 @@ class ProductForm(forms.ModelForm):
                 raise forms.ValidationError('Название продукта не должно содержать стоп-слов.')
         return name
 
+
     def clean_description(self):
         description = self.cleaned_data['description']
         for stop_word in self.stop_words:
@@ -43,11 +56,13 @@ class ProductForm(forms.ModelForm):
                 raise forms.ValidationError('Название продукта не должно содержать стоп-слов.')
         return description
 
+
     def clean_price(self):
         price = self.cleaned_data['price']
         if price < 0:
             raise forms.ValidationError('Цена не может быть отрицательной.')
         return price
+
 
     def clean_image(self):
         image = self.cleaned_data['image']
@@ -55,5 +70,7 @@ class ProductForm(forms.ModelForm):
             if image.size > 1024 * 1024:  # 1MB
                 raise forms.ValidationError('Изображение не может быть больше 1MB.')
         return image
+
+
 
 
