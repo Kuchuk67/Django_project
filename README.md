@@ -27,9 +27,10 @@ ALTER DATABASE catalog_shop OWNER TO user_catalog;
  python manage.py migrate
 ```
 ### Создание пользователя для админпанели
-для создания и редактированиязаписей необходима автоизация
+для управления проектом необходимо 
+создание администратора
 ```
- python manage.py createsuperuser
+python manage.py add_superuser 
 ```
 
 ### Загрузка демоданных

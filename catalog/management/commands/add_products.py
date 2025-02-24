@@ -2,7 +2,6 @@ from django.core.management.base import BaseCommand
 from catalog.models import Category, Product, PageBlock
 from catalog.management.commands.parser import parser_xml_category, parser_xml_product
 from django.core.management import call_command
-#from django.contrib.auth.models import User
 from users.models import CustomUser
 from datetime import datetime
 dt = str(datetime.now())+ "+03:00"
@@ -17,7 +16,6 @@ class Command(BaseCommand):
         Category.objects.all().delete()
         Product.objects.all().delete()
         PageBlock.objects.all().delete()
-
 
 
 

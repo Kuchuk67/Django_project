@@ -37,16 +37,9 @@ class ProductListView(ListView):
         # иначе только опубликованные
         if not user.is_superuser and not user.has_perm('catalog.can_unpublish_product'):
             return queryset.filter(**FILTER).filter(Q(unpublish_product='published') | Q(owner=user.pk)).order_by(*sort)
-        #  user.pk == product.owner_id
-        #  user.is_superuser
-        #  user.has_perm('catalog.can_unpublish_product'):
-
-        # Q(author='John Smith') & Q(year=2021)
-        #return queryset.all().order_by(*sort)
         return queryset.filter(**FILTER).order_by(*sort)
 
 
-    #extra_context = {'showcase_product': new_product()}
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data()
         context["showcase_product"] = new_product()
@@ -80,6 +73,8 @@ class ProductUpdateView(LoginRequiredMixin, UpdateView):
             return ProductModeratorForm
         else:
             return PermissionDenied
+
+
 
 
 class ProductDeleteView(LoginRequiredMixin, DeleteView):

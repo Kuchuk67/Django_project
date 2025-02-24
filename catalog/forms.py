@@ -73,4 +73,12 @@ class ProductForm(forms.ModelForm):
 
 
 
+    """def clean_unpublish_product(self):
+        unpublish_product = self.cleaned_data['unpublish_product']
+        if unpublish_product == 'published':
+            unpublish_product = 'unpublished'
+        return unpublish_product"""
+
+
+
 

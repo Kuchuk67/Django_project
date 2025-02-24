@@ -38,9 +38,6 @@ class Product(models.Model):
      ]
     unpublish_product = models.CharField(max_length=17, verbose_name='наименование', choices=STATUS_CHOICES, default='pending')
 
-    """def save(self, *args, **kwargs):
-        self.owner = self.request.user.id
-        super(Product, self).save(*args, **kwargs)"""
 
     def __str__(self):
         return f'{self.name} - {self.price}'
