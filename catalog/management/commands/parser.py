@@ -2,6 +2,7 @@ import re
 import os
 from datetime import datetime
 from config.settings import BASE_DIR
+from users.models import CustomUser
 
 file_xml_name = os.path.join(BASE_DIR,'catalog', 'management', 'commands', 'feed-yml.xml')
 
@@ -27,6 +28,8 @@ def parser_xml_category():
                 file_xml += f'''    <object model="catalog.category" pk="{id}">
             <field name="category_name" type="CharField">{name}</field>
             <field name="description" type="TextField"> </field>
+            
+            
         </object>'''
     file_xml += '</django-objects>'
     with  open('catalog_fixture.xml', 'w', encoding='utf-8') as file:
@@ -40,6 +43,7 @@ def parser_xml_product():
     file_xml = '''<?xml version="1.0" encoding="utf-8"?>
     <django-objects version="1.0">
     '''
+    user = CustomUser.objects.get(email='user@mail.ru')
 
     with  open(file_xml_name, 'r', encoding='utf-8') as file:
         record = False
@@ -94,6 +98,8 @@ def parser_xml_product():
             <field name="price" type="IntegerField">{price}</field>
             <field name="created_at" type="DateTimeField">{dt}+03:00</field>
             <field name="updated_at" type="DateTimeField">{dt}+03:00</field>
+            <field name="unpublish_product" type="CharField">published</field>
+            <field name="owner" type="IntegerField">{user.pk}</field>
         </object>
     '''
 
@@ -104,5 +110,5 @@ def parser_xml_product():
 
 
 
-print(parser_xml_category())
-print(parser_xml_product())
+#print(parser_xml_category())
+#print(parser_xml_product())
