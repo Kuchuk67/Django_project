@@ -19,3 +19,15 @@ def get_product_from_cache():
         return Product.objects.all()
 
 
+def filter_and_sort_products(product_list, queryset):
+    # Получаем из get параметры сортировки
+    if sort := product_list.request.GET.get('sort'):
+        sort = sort.split(',')
+    else:
+        sort = ['-id']
+    # фильтрация по категориям
+    if cat := product_list.request.GET.get('category'):
+        return queryset.filter(category=cat).order_by(*sort)
+    return queryset.all().order_by(*sort)
+
+

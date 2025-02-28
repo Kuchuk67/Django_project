@@ -6,7 +6,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy, reverse
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import ProductForm
-from .services import get_product_from_cache
+from .services import get_product_from_cache, filter_and_sort_products
 
 
 # Create your views here.
@@ -25,15 +25,11 @@ class ProductListView(ListView):
         #queryset = Product.objects.all()
         queryset = get_product_from_cache()
 
-        # Получаем из get параметры сортировки
-        if sort := self.request.GET.get('sort'):
-            sort = sort.split(',')
-        else:
-            sort = ['-id']
-        # фильтрация по категориям
-        if cat := self.request.GET.get('category'):
-            return queryset.filter(category=cat).order_by(*sort)
-        return queryset.all().order_by(*sort)
+        # Фильтрация и сортировка выдачи
+        return filter_and_sort_products(self, queryset)
+
+
+
 
     #extra_context = {'showcase_product': new_product()}
     def get_context_data(self, *, object_list=None, **kwargs):
