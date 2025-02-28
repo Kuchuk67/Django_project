@@ -98,6 +98,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "config.wsgi.application"
 
+CACHES_ENABLED = True
+if CACHES_ENABLED:
+    CACHES = {
+        'default': {
+            'BACKEND': 'django.core.cache.backends.redis.RedisCache',
+            'LOCATION': 'redis://127.0.0.1:6379/1',
+        }
+}
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases

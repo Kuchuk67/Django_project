@@ -6,6 +6,8 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy, reverse
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import ProductForm
+from .services import get_product_from_cache
+
 
 # Create your views here.
 
@@ -17,8 +19,13 @@ class ProductListView(ListView):
 
     # Фильтрация и сортировка товаров на странице
     def get_queryset(self):
-        queryset = super().get_queryset()
-        # параметры сортировки
+
+        # Проверяем кеш - импорт сервисной функции
+        #queryset = super().get_queryset()
+        #queryset = Product.objects.all()
+        queryset = get_product_from_cache()
+
+        # Получаем из get параметры сортировки
         if sort := self.request.GET.get('sort'):
             sort = sort.split(',')
         else:

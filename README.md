@@ -1,6 +1,6 @@
 # Django_project
 проект  интернет-магазина на фрейморке Django 
-#### Django + PostgreSQL + bootstrap-5 + XML
+#### Django + PostgreSQL + bootstrap-5 + XML + Redis 
 
 ## Установка Интернет-магазина
 Проект работает с зависимостями под управлением poetry 
