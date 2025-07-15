@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="fon">
+    <div class=" container-lg">
+
+        <div class="title">
+            <h1>Контакты</h1>
+        </div>
+        {% if request.status_post %}
+        <div id="top-alert" class=" alert alert-success alert-dismissible fade show" role="alert">
+
+            Ваше сообщение отправлено!
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                  setTimeout(() => {
+                    const alert = bootstrap.Alert.getOrCreateInstance('#top-alert');
+                    alert.close();
+                  }, 3000);
+                });
+            </script>
+        </div>
+        {% endif %}
+        <div class="row  gx-5">
+            <div class="col-12 col-sm-5  py-2">
+                <div class="card text-bg-secondary">
+                    <div class="card-body">
+                        <h2>Отправить сообщение</h2>
+                        <form action="/contacts/" method="POST">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                Имя
+                                <input type="text" name="name" class="form-control" placeholder="">
+                            </div>
+                            <div class="mb-3">
+                                Почта
+                                <input type="email" name="email" class="form-control" placeholder="">
+                            </div>
+
+                            <div class="mb-3">
+                                Сообщение
+                                <textarea class="form-control" name="message" placeholder="" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-7 py-2">
+                <div class="card text-bg-primary">
+                    <div class="card-body">
+                        {% for i in  contact_text %}
+                            <h2>{{ i.title }}</h2>
+                            {{ i.text | safe}}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

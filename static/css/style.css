@@ -1,0 +1,157 @@
+  .menu-block {
+    /*background: --bs-body-color;*/
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    z-index: 9;}
+    .fon {    padding-left: 250px;
+    width: 100%;}
+
+
+
+    .navbar-brand {margin: 10px 0 0 15px;}
+    .navbar-brand-txt {color: white; text-decoration: none;
+    font-size: 14pt;}
+    .nav-item {width:100%;}
+    .navbar-nav {
+    flex-wrap: wrap;
+    width: 250px;
+}
+    .nav-item .active  {background: #218dff;}
+    .navbar-collapse {
+    width: 250px!important;
+}
+
+.user_menu {width: 250px;}
+    .user_avatar {
+    width: 40px;
+    float: left;
+    border-radius: 30px;
+    overflow: hidden;
+    }
+    .dropdown-menu{width: 250px;}
+
+.showcase_img {width:100%; max-width:150px; margin: auto;}
+.showcase_img img {width:100%; }
+.carousel-control-prev, .carousel-control-next {border: 0;
+    background: transparent;}
+
+   .title {text-align: center;
+    padding: 50px 10px 10px 10px;}
+
+/* Витрина продуктов */
+    .showcase_product { border: 1px solid #bbb; border-radius: 10px; min-height: 250px; padding-bottom: 20px; margin-bottom: 30px;}
+    .showcase_product > a{color: #000000;  text-decoration: none;}
+
+    .showcase_product_title {width: 100%;
+    background: #eee;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;}
+    .carousel-control-next-icon, .carousel-control-prev-icon {background-color: #444;    height: 30px;    width: 30px;
+    background-size: 70%;    border-radius: 15px;}
+    .carousel-control-prev, .carousel-control-next {width: 60px}
+
+    .product_price {width: 100%;
+    font-size: 20pt;
+    font-weight: 800;
+    text-align: center;
+    padding: 20px 0;}
+
+    .product_description {padding: 20px;}
+    .button_in_basket {width: 95%;
+    max-width: 200px;
+    text-align: center;
+    border: 2px solid #3290ff;
+    border-radius: 5px;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: 600;
+    padding: 5px 0 6px 0;}
+
+
+/* КАТЕГОРИИ  */
+    .category { border: 1px solid #bbb; border-radius: 10px; min-height: 250px; padding-bottom: 20px; margin-bottom: 30px;}
+    .category > a{color: #000000;  text-decoration: none;}
+.category_img {width:100%; }
+.category_img img {width:100%; }
+.category_title {width: 100%;
+    background: #eee;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;}
+
+    /* КАТАЛОГ  */
+
+.pagination {justify-content: center;}
+.catalog {padding-bottom: 50px;}
+.img_catalog{}
+.product_description{}
+.link_catalog{padding: 3px 10px 5px 10px;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 10pt;
+    font-weight: 600;
+    margin-left: 20px;}
+.link_catalog:hover {color: #aaa; background: #444;}
+
+ .count_products_in_catalog{float: right;}
+
+ .errorlist{color: red; font-weight:600;}
+ .nav-item svg   {fill: #999;}
+  .nav-item:hover svg   {fill: #eee;}
+
+.form_sm, .form_sm_login {margin: 0 auto;
+    max-width: 450px;}
+.navbar-collapse{overflow: visible; margin-top: 10px;}
+
+.form_sm_login input:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #8bbafe;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(13, 110, 253, .25);
+}
+
+.form_sm_login input {
+    display: block;
+    width: 100%;
+    min-height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+
+     @media (max-width: 991px) {
+.fon {    padding-left: 60px;}
+.menu-block {  width: 60px;}
+.navbar-brand-txt {display: none;}
+.user_menu_txt  {display: none;}
+.user_menu {width: 70px; padding:0}
+.user_menu.a{padding: 5px}
+/*.product_description {display: none;}*/
+}
+
+@media (max-width: 768px)
+{
+.showcase_col_3 {display: none;}
+}
+@media (max-width: 564px)
+{
+.showcase_col_2 {display: none;}
+}

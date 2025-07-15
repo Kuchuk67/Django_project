@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="fon">
+    <div class=" container-lg">
+        <div class="title">
+            <h1>{{ product.name }}</h1>
+          </div>
+          <div class="row">
+            <div class="col-6 d-flex  justify-content-center">
+                <img src="/media/{{ product.image }}" width="100%">
+            </div>
+            <div class="col-6">
+
+                <form method="POST">
+                    {% csrf_token %}
+                <p>Действительно удалить {{ product.name }}</p>
+                <button type="submit" class="btn btn-primary">Удалить</button>
+                <a href="{% url 'catalog:product' %}" class="btn btn-secondary">Отмена</a>
+                </form>
+
+
+
+
+                <p>{{ product.description  | safe }}</p>
+              <div class="product_price">{{ product.price }} ₽</div>
+
+
+            </div>
+          </div>
+
+
+
+
+
+    </div>
+</div>
+{% endblock %}
