@@ -5,6 +5,7 @@ from django.urls import reverse
 # Create your models here.
 class CustomUser(AbstractUser):
     username = models.CharField(max_length=100, verbose_name='Имя', blank=True, unique=False)
+
     email = models.EmailField(unique=True)
     avatar = models.ImageField(upload_to='avatars/', blank=True, verbose_name='аватарка')
     country = models.CharField(max_length=100, verbose_name='страна', blank=True)
@@ -12,7 +13,7 @@ class CustomUser(AbstractUser):
 
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ["username"]
 
     def __str__(self):
         return self.email
